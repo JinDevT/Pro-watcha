@@ -27,15 +27,9 @@ const Start = () => {
                                     <span>왓챠로 로그인</span>
                                 </Link>
                                 <br/>
-                                                           
-                                
                             </div>
-                            
                         </div>
-                        
                     </div>
-                    
-
                 </div>
             </div>
         </div>
