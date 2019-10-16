@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+
+.wrap.start .inner .container .cont{
+    background: url('../images/start_bg.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-height: 900px;
+}
+.wrap.start .inner .container .cont .inner .area_text {
+    display: inline-block;
+}
+.wrap.start .inner .container .cont .inner .area_text .logo {
+    display: inline-block;
+    width: 345px;
+    height: 125px;
+    background: url('../images/logo.png') no-repeat ;
+    text-indent: -9999px;
+    
+}
+
+.wrap.start .inner .container .cont .inner .area_text .page_btn {
+    display: inline-block;
+    margin: 10px 0;
+    width: 290px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .page_btn.email_join {
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.wrap.start .inner .container .cont .inner .area_text .page_btn.email_join:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .page_btn.face_join {
+    background-color: #4065b3;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .sub_tit {
+    margin: 10px 0;
+    line-height: 1.3;
+    color: #BDBDBD;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .sub_tit.face_info {
+    font-size: 13px;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .line_div{
+    width: 260px;
+    height: 1px;
+    background-color: rgba(154,151,161,0.3);
+    margin: 0 auto 20px;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .sub_tit.watcha_info {
+    font-size: 15px;
+}
+
+.wrap.start .inner .container .cont .inner .area_text .page_btn.watcha_login {
+    background: #ff3376;
+} 
+
