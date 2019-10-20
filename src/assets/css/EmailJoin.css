@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.wrap.email_join .inner .container .cont{
+    background: url('../images/start_bg.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-height: 900px;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text {
+    display: inline-block;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .wrap_tit {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap {
+    text-align: left;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner {
+    margin-bottom: 20px;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner .input_box {
+    
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner .input_box > label {
+   position: relative;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 50px;
+   padding: 10px;
+   padding-right: 40px;
+   background-color: #fff;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner .input_box > label:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner .input_box > label:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrap.email_join .inner .container .cont .inner .area_text .form_wrap .form_inner .input_box label > input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 18px;
+}

@@ -13,7 +13,7 @@ const Start = () => {
                             <div className="area_text">
                                 <Link to="/" className="logo">로고</Link>
                                 <br/>
-                                <Link to="/" className="page_btn email_join">
+                                <Link to="/EmailJoin" className="page_btn email_join">
                                     <span>이메일로 왓챠에 가입</span>
                                 </Link>
                                 <br/>
