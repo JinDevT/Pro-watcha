@@ -24,6 +24,7 @@ class EmailJoin extends Component {
     }
 
     handleSubmit = () => {
+        alert(this.name, this.email, this.password)
         console.log(this.name, this.email, this.password)
     }
 
@@ -49,10 +50,10 @@ class EmailJoin extends Component {
                                     <div className="wrap_tit">
                                         <p>회원가입</p>
                                     </div>
-                                    <form className="form_wrap" onSubmit={this.handleSubmit}>
+                                    <form className="form_wrap" >
                                         
                                         {/* 회원가입 */}
-                                        <div className="form_inner">
+                                        <div className="form_join_inner">
                                             <div className="input_box">
                                                 <label htmlFor="inputName">
                                                     <input 
@@ -86,45 +87,43 @@ class EmailJoin extends Component {
                                         {/* //회원가입 */}
 
                                         {/* checkbox */}
-                                        <div>
-                                            <div>
+                                        <div className="form_agree_inner">
+                                            <div className="agree_box all_checkbox">
                                                 <label>
                                                     <input type="checkbox"
                                                     />
-                                                    전체약관에 동의합니다.
+                                                    <span className="txt_desc">전체약관에 동의합니다.</span>
                                                 </label>
                                             </div>
-                                            <div>
+                                            <div className="agree_box">
                                                 <label>
                                                     <input type="checkbox"
                                                     />
-                                                    왓챠 서비스 이용약관에 동의합니다.
+                                                    <span className="txt_desc">왓챠 서비스 이용약관에 동의합니다.</span>
                                                 </label>
                                             </div>
-                                            <div>
+                                            <div className="agree_box">
                                                 <label>
                                                     <input type="checkbox"
                                                     />
-                                                    왓챠플레이 서비스 이용약관에 동의합니다.
+                                                    <span className="txt_desc">왓챠플레이 서비스 이용약관에 동의합니다.</span>
                                                 </label>
                                             </div>
-                                            <div>
+                                            <div className="agree_box">
                                                 <label>
                                                     <input type="checkbox"
                                                     />
-                                                    개인정보 취급방침에 동의합니다.
+                                                    <span className="txt_desc">개인정보 취급방침에 동의합니다.</span>
                                                 </label>
                                             </div>
                                         </div>
                                         {/* //checkbox */}
                                         
-                                        <div>
-                                            <button type="submit">가입완료</button>
-                                            <p>결제정보요? 충분히 둘러보시고 입력해도 늦지 않아요.</p>
+                                        <div className="form_join_btn">
+                                            <button className="join_complete_btn" type="submit" onSubmit={this.handleSubmit}>가입완료</button>
+                                            <p className="txt_desc">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않았어요.</p>
                                         </div>
                                     </form>
-
-                                    
                                 </div>
                             </div>
                         </div>
