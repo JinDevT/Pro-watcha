@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Nav from './Nav';
+
 
 import '../assets/css/EmailJoin.css';
 
@@ -24,8 +26,8 @@ class EmailJoin extends Component {
     }
 
     handleSubmit = () => {
-        alert(this.name, this.email, this.password)
-        console.log(this.name, this.email, this.password)
+        alert(this.state.name, this.state.email, this.state.password)
+        
     }
 
     hand
@@ -36,12 +38,7 @@ class EmailJoin extends Component {
             <div className="wrap email_join">
                 <div className="inner">
                     {/* nav */}
-                    <nav className="nav">
-                        <Link to='/' className="logo">로고</Link>
-                        <div className="right_nav">
-                        <Link to='/start' className="btn start_btn">로그인</Link>
-                        </div>
-                    </nav>
+                    <Nav />
                     {/* //nav */}
                     <div className="container">
                         <div className="cont">
@@ -50,7 +47,7 @@ class EmailJoin extends Component {
                                     <div className="wrap_tit">
                                         <p>회원가입</p>
                                     </div>
-                                    <form className="form_wrap" >
+                                    <form className="form_wrap" onSubmit={this.handleSubmit} >
                                         
                                         {/* 회원가입 */}
                                         <div className="form_join_inner">
@@ -120,7 +117,7 @@ class EmailJoin extends Component {
                                         {/* //checkbox */}
                                         
                                         <div className="form_join_btn">
-                                            <button className="join_complete_btn" type="submit" onSubmit={this.handleSubmit}>가입완료</button>
+                                            <button className="join_complete_btn" type="submit" >가입완료</button>
                                             <p className="txt_desc">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않았어요.</p>
                                         </div>
                                     </form>

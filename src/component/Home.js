@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Nav from './Nav';
 import '../assets/css/Home.css';
 
 const Home= () => {
@@ -7,15 +8,10 @@ const Home= () => {
         <div className="wrap">
             <div className="inner">
                 {/* nav */}
-                <nav className="nav">
-                    <Link to='/' className="logo">로고</Link>
-                    <div className="right_nav">
-                    <Link to='/start' className="btn start_btn">시작하기</Link>
-                    </div>
-                </nav>
+                <Nav/>
                 {/* //nav */}
-
                 {/* container */}
+                
                 <div className="container">
                     {/* cont01 */}
                     <div className="cont cont01">

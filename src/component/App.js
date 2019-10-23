@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './assets/css/reset.css';
-import Home from './component/Home.js';
-import Start from './component/Start.js';
-import EmailJoin from './component/EmailJoin';
+import '../assets/css/reset.css';
+import Home from './Home.js';
+import Start from './Start.js';
+import EmailJoin from './EmailJoin';
 
 
 
