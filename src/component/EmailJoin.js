@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import Input from './Input';
 
 
 import '../assets/css/EmailJoin.css';
@@ -25,12 +26,12 @@ class EmailJoin extends Component {
         this.setState({ password : value})
     }
 
-    handleSubmit = () => {
-        alert(this.state.name, this.state.email, this.state.password)
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state.name, this.state.email, this.state.password)
         
     }
 
-    hand
     render() {
         console.log('render');
         const { name, email, password } = this.state; 
@@ -48,40 +49,39 @@ class EmailJoin extends Component {
                                         <p>회원가입</p>
                                     </div>
                                     <form className="form_wrap" onSubmit={this.handleSubmit} >
-                                        
-                                        {/* 회원가입 */}
                                         <div className="form_join_inner">
                                             <div className="input_box">
                                                 <label htmlFor="inputName">
-                                                    <input 
-                                                        type="name" 
-                                                        id="inputName" 
-                                                        placeholder="이름 (홍길동)" 
+                                                    {/* 회원가입 */}
+                                                    <Input 
+                                                        type="name"
+                                                        id="inputName"
+                                                        placeholder="이름 (홍길동)"
                                                         value={name}
-                                                        onChange={this.handleChangeName} 
+                                                        onChange={this.handleChangeName}
                                                     />
-                                                </label>
-                                                <label htmlFor="inputEmail">
-                                                    <input 
-                                                        type="email" 
-                                                        id="inputEmail" 
-                                                        placeholder="이메일 (example@gmail.com)" 
+                                               </label>
+                                               <label htmlFor="inputEmail">
+                                                    <Input 
+                                                        type="email"
+                                                        id="inputEmail"
+                                                        placeholder="이메일 (example@gmail.com)"
                                                         value={email}
                                                         onChange={this.handleChangeEmail}
                                                     />
                                                 </label>
                                                 <label htmlFor="inputPassWord">
-                                                    <input 
-                                                        type="password" 
-                                                        id="inputPassWord" 
-                                                        placeholder="비밀번호 (6자이상)" 
+                                                    <Input 
+                                                        type="password"
+                                                        id="inputPassWord"
+                                                        placeholder="비밀번호 (6자이상)"
                                                         value={password}
                                                         onChange={this.handleChangePass}
                                                     />
                                                 </label>
                                             </div>
-                                        </div>
-                                        {/* //회원가입 */}
+                                        </div>    
+                                                    {/* //회원가입 */}
 
                                         {/* checkbox */}
                                         <div className="form_agree_inner">
