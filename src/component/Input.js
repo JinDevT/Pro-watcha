@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import '../assets/css/EmailJoin.css';
+import '../assets/css/Sign.css';
 
 class Input extends Component {
     render() {

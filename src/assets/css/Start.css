@@ -29,11 +29,11 @@
     color: #fff;
 }
 
-.wrap.start .inner .container .cont .inner .area_text .page_btn.email_join {
+.wrap.start .inner .container .cont .inner .area_text .page_btn.sign_up {
     background-color: rgba(0,0,0,0.4);
     border: 1px solid rgba(255,255,255,0.3);
 }
-.wrap.start .inner .container .cont .inner .area_text .page_btn.email_join:hover {
+.wrap.start .inner .container .cont .inner .area_text .page_btn.sign_up:hover {
     background-color: #fff;
     color: #000;
 }
@@ -63,7 +63,7 @@
     font-size: 15px;
 }
 
-.wrap.start .inner .container .cont .inner .area_text .page_btn.watcha_login {
+.wrap.start .inner .container .cont .inner .area_text .page_btn.sign_in {
     background: #ff3376;
 } 
 

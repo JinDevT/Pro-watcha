@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+.wrap.sign .inner .container .cont{
+    background: url('../images/start_bg.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-height: 900px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text {
+    display: inline-block;
+    width: 300px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .wrap_tit {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap {
+    text-align: left;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner {
+    margin-bottom: 20px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box {
+    
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box > label {
+   position: relative;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 50px;
+   padding: 10px;
+   padding-right: 40px;
+   background-color: #fff;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box > label:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box > label:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box label > input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 18px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_agree_inner {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #d5d4d7;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_agree_inner > .agree_box {
+    margin-bottom: 10px;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_agree_inner > .agree_box > label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_agree_inner > .agree_box > label  > .txt_desc {
+    margin-left: 5px;
+    line-height: 1.3;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_btn {
+    position: relative;
+    text-align: center;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_btn .join_complete_btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fc426a;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_btn .txt_desc {
+    font-size: 12px;
+    color: #d5d4d7;
+}
+
+
+/* Sign_in */
+
+.wrap.sign .inner .container .cont .inner .area_text .wrap_tit .find_password {
+    float: right;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+
+/* Find_password */
+.wrap.sign_pass .inner .container .cont .inner .area_text .form_wrap .txt_desc {
+    padding: 10px;
+    font-size: 12px;
+    color: #d5d4d7;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+

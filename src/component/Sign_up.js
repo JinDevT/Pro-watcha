@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import Input from './Input';
 
 
-import '../assets/css/EmailJoin.css';
+import '../assets/css/Sign.css';
 
 
-class EmailJoin extends Component {
+class Sign_up extends Component {
     state = {
         name: '',
         email: '',
@@ -36,7 +35,7 @@ class EmailJoin extends Component {
         console.log('render');
         const { name, email, password } = this.state; 
         return(
-            <div className="wrap email_join">
+            <div className="wrap sign sign_up">
                 <div className="inner">
                     {/* nav */}
                     <Nav />
@@ -46,7 +45,7 @@ class EmailJoin extends Component {
                             <div className="inner">
                                 <div className="area_text">
                                     <div className="wrap_tit">
-                                        <p>회원가입</p>
+                                        회원가입
                                     </div>
                                     <form className="form_wrap" onSubmit={this.handleSubmit} >
                                         <div className="form_join_inner">
@@ -132,4 +131,4 @@ class EmailJoin extends Component {
 }
 
 
-export default EmailJoin;
+export default Sign_up;
