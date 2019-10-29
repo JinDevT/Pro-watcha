@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8";
 
 .wrap{
     height: 100%;
@@ -8,13 +8,13 @@
   
   }
   
-  /* .wrap .inner .nav {
+  .wrap .inner .nav {
     position: fixed;
     z-index: 9999;
     width: 100%;
     height: 100px;
     padding: 0 50px;
-  } */
+  }
   
   .wrap .inner .nav::after {
     display: block;
@@ -32,60 +32,51 @@
   } 
   
 .right_nav {
-    float: right;
+    
   }
 
   .wrap .inner .nav .right_nav .nav_list {
 
   }
 
-.right_nav .nav_list .nav_list_li {
-    display: inline-block;
-    padding: 0 20px;
+.nav_list_li {
+    
   }
   
-.right_nav .btn{
-      display: inline-block;
-      height: 32px;
-      padding: 0 15px;
-      margin-top: 35px;
-      line-height: 32px;
-      border-radius: 30px;
-      text-align: center;
-      font-size: 15px;
-      background-color: #fff;
+.btn{
+      
   }
   
   .wrap .inner .container {
     overflow: hidden;
   }
   
-  .wrap .inner .container .cont {
+.cont {
     position: relative;
     min-height: 900px;
     
   }
-  .wrap .inner .container .cont.cont01 {
+ .cont.cont01 {
     background: url('../images/알라딘.jpg') no-repeat; 
     background-size: cover;
   }
 
-  .wrap .inner .container .cont.cont02 {
+  .cont.cont02 {
     background: url('../images/극한직업.jpg') no-repeat; 
     background-size: cover;
   }
 
-  .wrap .inner .container .cont.cont03 {
+ .cont.cont03 {
     background: url('../images/어벤져스.jpeg') no-repeat; 
     background-size: cover;
   }
 
-  .wrap .inner .container .cont.cont04 {
+.cont.cont04 {
     background: url('../images/삼시세끼.png') no-repeat; 
     background-size: cover;
   }
   
-  .wrap .inner .container .cont .inner {
+ .cont .inner {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -93,7 +84,7 @@
     padding: 0 135px;
   }
   
-  .wrap .inner .container .cont .inner .area_text {
+ .cont .inner .area_text {
     overflow: hidden;
     position: relative;
     top: 50%;
@@ -103,25 +94,25 @@
     z-index: 100;
   }
   
-  .wrap .inner .container .cont .inner .area_text .wrap_tit {
+.cont .inner .area_text .wrap_tit {
     color: #fff;
   
   }
   
-  .wrap .inner .container .cont .inner .area_text .wrap_tit .big_tit {
+ .cont .inner .area_text .wrap_tit .big_tit {
     margin-top: 70px;
     font-size: 60px;
     letter-spacing: 0.3px;
     line-height: 1;
   }
   
-  .wrap .inner .container .cont .inner .area_text .wrap_tit .small_tit {
+.cont .inner .area_text .wrap_tit .small_tit {
     margin: 50px 0;
     font-size: 20px;
     opacity: 0.8;
   }
   
-  .wrap .inner .container .cont .inner .area_text .wrap_tit .free_btn {
+.cont .inner .area_text .wrap_tit .free_btn {
     display: inline-block;
     height: 60px;
     width: 200px;
@@ -135,4 +126,4 @@
     color: #fff;
   }
   
-  
+   */
