@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Logo from '../../assets/images/logo.png';
 
 
 const NavBlock = styled.nav`
@@ -19,7 +20,7 @@ const NavBlock = styled.nav`
 
 const LeftNav = styled.div`
     float: left;
-    background: url(${props => props.logoImg}) no-repeat center ;
+    background: url(${Logo}) no-repeat;
     width: 345px;
     height: 100%;
     background-size: contain;
@@ -63,7 +64,7 @@ const ListLi =  styled.li`
 const Nav = () => {
     return (
         <NavBlock>
-            <LeftNav logoImg="../assets/images/logo.png">
+            <LeftNav>
                 <Link to='/' className="logo" ></Link>
             </LeftNav>
             
@@ -73,7 +74,7 @@ const Nav = () => {
                     2. 로그인 텍스트
                 */}
                 <NavList>
-                    <ListLi >
+                    <ListLi>
                         <Link to='/start' className="btn start_btn">시작하기</Link>
                     </ListLi>
                 </NavList>

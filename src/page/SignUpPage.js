@@ -1,7 +1,16 @@
 import React from 'react';
+import SignTemplate from '../component/Sign/SignTemplate';
+import SignForm from '../component/Sign/SignForm';
+import CheckBox from '../component/Sign/ChexBox';
 
 const SignUpPage = () => {
-    return <div>회원가입</div>
+    return (
+        <SignTemplate>
+            <SignForm>
+                <CheckBox/>
+            </SignForm>
+        </SignTemplate>
+    )
 }
 
 export default SignUpPage;

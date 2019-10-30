@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
-import Input from './Input';
+import Nav from '../common/Nav';
+import Input from '../Input';
 
 
 import '../assets/css/Sign.css';
 
 
-class Sign_up extends Component {
+class SignUp extends Component {
     state = {
         name: '',
         email: '',
@@ -131,4 +131,4 @@ class Sign_up extends Component {
 }
 
 
-export default Sign_up;
+export default SignUp;

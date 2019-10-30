@@ -41,6 +41,7 @@
    padding: 10px;
    padding-right: 40px;
    background-color: #fff;
+   border-bottom: 1px solid rgba(154,151,161,0.2);
 }
 
 .wrap.sign .inner .container .cont .inner .area_text .form_wrap .form_join_inner .input_box > label:first-child {

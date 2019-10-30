@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
-import Input from './Input';
+import Input from '../Input';
 
-class Find_password extends Component {
+class Sign_in extends Component {
     state = {
         email: '',
-        
+        password: ''
     }
 
     handleChangeEmail =({ target : { value }}) => {
         this.setState({ email : value})
     }
 
-
+    handleChangePass = ({ target : { value }}) => {
+        this.setState({ password : value})
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state.email)
+        console.log(this.state.name, this.state.email, this.state.password)
         
     }
     render() {
-        const { email } = this.state;
+        const { email, password } = this.state;
         return(
-            <div className="wrap sign sign_pass">
+            <div className="wrap sign sign_in">
                 <div className="inner">
                     {/* nav */}
                     <Nav />
@@ -33,7 +35,8 @@ class Find_password extends Component {
                             <div className="inner">
                                 <div className="area_text">
                                     <div className="wrap_tit">
-                                        비밀번호를 잊어버리셨군요.
+                                        <span>로그인</span>
+                                        <Link to='/find_password' className="find_password">비밀번호를 잊어버리셨나요?</Link>
                                     </div>
                                     <form className="form_wrap" onSubmit={this.handleSubmit} >
                                         <div className="form_join_inner">
@@ -42,17 +45,25 @@ class Find_password extends Component {
                                                     <Input 
                                                         type="email"
                                                         id="inputEmail"
-                                                        placeholder="이메일을 입력해주세요."
+                                                        placeholder="이메일 (example@gmail.com)"
                                                         value={email}
                                                         onChange={this.handleChangeEmail}
                                                     />
                                                 </label>
+                                                <label htmlFor="inputPassWord">
+                                                    <Input 
+                                                        type="password"
+                                                        id="inputPassWord"
+                                                        placeholder="비밀번호 (6자이상)"
+                                                        value={password}
+                                                        onChange={this.handleChangePass}
+                                                    />
+                                                </label>
                                             </div>
                                         </div>    
-                                        <p className="txt_desc">기존에 가입하신 이메일 주소를 입력해주시면 임시주소가 발생됩니다. 임시주소로 들어오신 뒤 새로운 비밀번호를 설정하세요.</p>
                                         
                                         <div className="form_join_btn">
-                                            <button className="join_complete_btn" type="submit" >확인</button>
+                                            <button className="join_complete_btn" type="submit" >로그인</button>
                                         </div>
                                     </form>
                                 </div>
@@ -65,4 +76,4 @@ class Find_password extends Component {
     }
 }
 
-export default Find_password;
+export default Sign_in;
