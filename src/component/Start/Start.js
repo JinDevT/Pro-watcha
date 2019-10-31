@@ -85,7 +85,7 @@ const Start = () => {
                     <Link to="/" className="logo">로고</Link>
                     <br/>
                     <Link to="/Sign_up" className="page_btn sign_up">
-                        <span>이메일로 왓챠에 가입</span>
+                        <span>왓챠에 가입</span>
                     </Link>
                     <br/>
                     <Link to="/" className="page_btn face_join">

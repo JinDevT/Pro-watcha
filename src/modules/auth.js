@@ -20,11 +20,11 @@ export const initializeForm = createAction(INITIALIZE_FORM, form => form); //sig
 const initialState = {
     register: {
         username: '',
-        email: '',
         password: '',
+        passwordConfirm: '',
     },
     login: {
-        email: '',
+        username: '',
         password: '',
     }
 };

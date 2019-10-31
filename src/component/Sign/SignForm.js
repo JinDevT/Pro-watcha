@@ -81,38 +81,39 @@ const SignForm = ({type, form, onChange, onSubmit, children}) => {
             <form  className="form_wrap" onSubmit={onSubmit}>
                 <div className="form_join_inner">
                     <div className="input_box">
-                        {type ==='register' &&(
-                            <label htmlFor="inputName">
-                                <StyledInput
-                                name="username"
-                                type="name"
-                                id="inputName"
-                                placeholder="이름 (홍길동)"
-                                value={form.username}
-                                onChange={onChange}
-                                />
-                            </label>
-                        )}
-                        <label htmlFor="inputEmail">
+                        <label htmlFor="inputName">
                             <StyledInput
-                               name="email"
-                               type="email"
-                               id="inputEmail"
-                               placeholder="이메일 (example@gmail.com)"
-                               value={form.email}
-                               onChange={onChange}
+                            name="username"
+                            type="name"
+                            id="inputName"
+                            placeholder="아이디"
+                            value={form.username}
+                            onChange={onChange}
                             />
                         </label>
-                        <label htmlFor="inputPassWord">
+                        <label htmlFor="inputPassword">
                             <StyledInput
                                name="password"
                                type="password"
-                               id="inputPassWord"
-                               placeholder="비밀번호 (6자이상)"
+                               id="inputPassword"
+                               placeholder="비밀번호"
                                value={form.password}
                                onChange={onChange}
                             />
                         </label>
+                        {type === 'register' && (
+                            <label htmlFor="inputPasswordConfirm">
+                            <StyledInput
+                               name="passwordConfirm"
+                               type="password"
+                               id="inputPasswordConfirm"
+                               placeholder="비밀번호 확인"
+                               value={form.passwordConfirm}
+                               onChange={onChange}
+                            />
+                            </label>
+                        )}
+                        
                     </div>
                 </div>
                 {children}
