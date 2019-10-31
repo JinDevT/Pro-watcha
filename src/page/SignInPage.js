@@ -1,7 +1,13 @@
 import React from 'react';
+import SignTemplate from '../component/Sign/SignTemplate';
+import SignInForm from '../containers/Sign/SignInForm';
 
 const SignInPage = () => {
-    return (<div>로그인페이지</div>);
+    return (
+        <SignTemplate>
+            <SignInForm />
+        </SignTemplate>
+    );
 }
 
 export default SignInPage;

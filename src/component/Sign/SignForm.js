@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Button from '../common/Button';
 
 const SignFormBlock = styled.div`
     display: inline-block;
@@ -50,6 +50,12 @@ const SignFormBlock = styled.div`
         border-bottom-right-radius: 5px;
         border-bottom: none;
     }
+    .txt_desc  {
+        font-size: 12px;
+        color: #d5d4d7;
+        line-height: 1.3;
+        text-align: center;
+    }
 `;
 
 const StyledInput = styled.input`
@@ -58,43 +64,67 @@ const StyledInput = styled.input`
     border: 0;
     font-size: 18px;
 `;
-const SignForm = ({onSubmit, handleChangeName, handleChangeEmail, handleChangePass, children}) => {
+
+const textMap ={
+    login : '로그인',
+    register : '회원가입',
+    facebook : '페이스북 로그인',
+    
+};
+
+//회원가입,
+const SignForm = ({type, form, onChange, onSubmit, children}) => {
+    const text = textMap[type];
     return (
         <SignFormBlock>
-            <h3>회원가입</h3>
+            <h3>{text}</h3>
             <form  className="form_wrap" onSubmit={onSubmit}>
                 <div className="form_join_inner">
                     <div className="input_box">
-                        <label htmlFor="inputName">
-                            <StyledInput
-                               type="name"
-                               id="inputName"
-                               placeholder="이름 (홍길동)"
-                            //    value={form.name}
-                               onChange={handleChangeName}
-                            />
-                        </label>
+                        {type ==='register' &&(
+                            <label htmlFor="inputName">
+                                <StyledInput
+                                name="username"
+                                type="name"
+                                id="inputName"
+                                placeholder="이름 (홍길동)"
+                                value={form.username}
+                                onChange={onChange}
+                                />
+                            </label>
+                        )}
                         <label htmlFor="inputEmail">
                             <StyledInput
+                               name="email"
                                type="email"
                                id="inputEmail"
                                placeholder="이메일 (example@gmail.com)"
-                            //    value={form.email}
-                               onChange={handleChangeEmail}
+                               value={form.email}
+                               onChange={onChange}
                             />
                         </label>
                         <label htmlFor="inputPassWord">
                             <StyledInput
+                               name="password"
                                type="password"
                                id="inputPassWord"
                                placeholder="비밀번호 (6자이상)"
-                            //    value={form.password}
-                               onChange={handleChangePass}
+                               value={form.password}
+                               onChange={onChange}
                             />
                         </label>
                     </div>
                 </div>
                 {children}
+                <Button sign>{text}</Button>
+                {type === 'register' && (
+                    <p className="txt_desc">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않았어요.</p>
+                )};
+
+                {type === 'login' && (
+                    <Button facebook>페이스북 로그인</Button>
+                )}
+                
             </form>
         </SignFormBlock>
     );

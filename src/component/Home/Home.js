@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
+
 const Cont = styled.div`
     position: relative;
     min-height: 900px;
-    background : ${props => {
-        if(props.Content === 'Cont1') return '#fff';
-        else if(props.Content === 'Cont2') return '#000';
-        else if(props.Content === 'Cont3') return '#dddd';
-        else return '#f2f2f2';
-    }};
+    ${props => {
+        if(props.Content === 'Cont1') return props.backgroundImg;
+        else if(props.Content === 'Cont2') return props.backgroundImg;
+        else if(props.Content === 'Cont3') return props.backgroundImg;
+        else return props.backgroundImg;
+    }} 
     .inner{
         height: 100vh;
         width: 100%;
@@ -69,9 +70,9 @@ const Cont = styled.div`
 `;
 
 const Home = (props) =>{
-    console.log(props.content)
+    console.log(props.backgroundImg);
     return(
-        <Cont Content={props.content}>
+        <Cont Content={props.content} style={{backgroundImage : ''}}>
             <div className="inner">
                 <div className="area_text">
                     <h2 className="big_tit" >{props.title}</h2>
