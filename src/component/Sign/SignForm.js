@@ -81,12 +81,12 @@ const SignForm = ({type, form, onChange, onSubmit, children}) => {
             <form  className="form_wrap" onSubmit={onSubmit}>
                 <div className="form_join_inner">
                     <div className="input_box">
-                        <label htmlFor="inputName">
+                        <label htmlFor="inputEmail">
                             <StyledInput
-                            name="username"
-                            type="name"
-                            id="inputName"
-                            placeholder="아이디"
+                            name="email"
+                            type="email"
+                            id="inputEmail"
+                            placeholder="이메일을 입력해주세요."
                             value={form.username}
                             onChange={onChange}
                             />
