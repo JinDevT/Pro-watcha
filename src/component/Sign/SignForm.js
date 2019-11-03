@@ -113,11 +113,10 @@ const SignForm = ({type, form, onChange, onSubmit, children}) => {
                             />
                             </label>
                         )}
-                        
                     </div>
                 </div>
                 {children}
-                <Button sign>{text}</Button>
+                <Button sign type="submit">{text}</Button>
                 {type === 'register' && (
                     <p className="txt_desc">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않았어요.</p>
                 )};

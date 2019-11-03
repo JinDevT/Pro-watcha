@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Logo from '../../assets/images/logo.png';
 
 
@@ -10,6 +10,12 @@ const NavBlock = styled.nav`
     width: 100%;
     height: 100px;
     padding: 0 50px;
+    ${props =>
+        props.main &&
+        css`
+            top: 56px;
+        `}
+    
     &:after {
         display: block;
         content: '';
@@ -61,9 +67,9 @@ const ListLi =  styled.li`
 
 
 
-const Nav = () => {
+const Nav = props => {
     return (
-        <NavBlock>
+        <NavBlock {...props}>
             <LeftNav>
                 <Link to='/' className="logo" ></Link>
             </LeftNav>
