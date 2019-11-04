@@ -5,17 +5,26 @@ import Nav from '../common/Nav';
 
 import '../Main/MainSample.css';
 
+const MainBlock = styled.div`
+    height: 100%;
+    padding: 56px 0 0;
+`;
 
-const Home =() => {
+const MainBox =  styled.main`
+    background-color: #000;
+`;
+
+const Main =({children}) => {
     return(
-        <>
+        <MainBlock>
             <Header/>
-            <Nav main />
-        </>
-        
-        
-        
+            <Nav main type='main' />
+            <MainBox>
+                {children}
+            </MainBox>
+            
+        </MainBlock>
     );
 }
 
-export default Home;
+export default Main;

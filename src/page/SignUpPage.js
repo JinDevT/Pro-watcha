@@ -10,7 +10,6 @@ const SignUpPage = () => {
         <SignTemplate>
             <SignUpForm type="register">
                 <CheckBox/>
-                    
             </SignUpForm>
         </SignTemplate>
     )
