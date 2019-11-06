@@ -7,11 +7,9 @@ const StyleButton = styled.button`
     margin-bottom: 20px;
     border: none;
     border-radius: 50px;
-    
     color: #fff;
     font-size: 18px;
     cursor: pointer;
-
     ${props => 
         props.sign &&
         css`
@@ -22,8 +20,6 @@ const StyleButton = styled.button`
         css`
             background-color: #4065b3;
         `}
-    
-    
 `;
 
 const Button = props => <StyleButton {...props}/>

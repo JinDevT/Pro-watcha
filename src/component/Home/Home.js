@@ -7,12 +7,6 @@ import styled from 'styled-components';
 const Cont = styled.div`
     position: relative;
     min-height: 900px;
-    ${props => {
-        if(props.Content === 'Cont1') return props.backgroundImg;
-        else if(props.Content === 'Cont2') return props.backgroundImg;
-        else if(props.Content === 'Cont3') return props.backgroundImg;
-        else return props.backgroundImg;
-    }} 
     .inner{
         height: 100vh;
         width: 100%;
@@ -34,24 +28,15 @@ const Cont = styled.div`
         font-size: 60px;
         letter-spacing: 0.3px;
         line-height: 1;
-        color:${props => {
-            if(props.Content === 'Cont1') return '#333';
-            else if(props.Content === 'Cont2') return '#fff';
-            else if(props.Content === 'Cont3') return '#333';
-            else return '#333';
-        }};
+        color: #fff
     }
 
     .small_tit {
         margin: 50px 0;
         font-size: 20px;
         opacity: 0.8;
-        color:${props => {
-            if(props.Content === 'Cont1') return '#555';
-            else if(props.Content === 'Cont2') return '#eee';
-            else if(props.Content === 'Cont3') return '#555';
-            else return '#555';
-        }};
+        color: #fff;
+        opacity: 0.6;
     }
     .btn {
         display: inline-block;
@@ -71,8 +56,13 @@ const Cont = styled.div`
 
 const Home = (props) =>{
     console.log(props.backgroundImg);
+    const styles = {
+        backgroundImage: `url(${props.backgroundImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+    }
     return(
-        <Cont Content={props.content} style={{backgroundImage : ''}}>
+        <Cont Content={props.content} style={styles}>
             <div className="inner">
                 <div className="area_text">
                     <h2 className="big_tit" >{props.title}</h2>

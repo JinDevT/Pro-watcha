@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../common/Button';
 
@@ -116,13 +117,13 @@ const SignForm = ({type, form, onChange, onSubmit, children}) => {
                     </div>
                 </div>
                 {children}
-                <Button sign type="submit">{text}</Button>
+                <Button sign type="submit" component={Link} to='/main'>{text}</Button>
                 {type === 'register' && (
                     <p className="txt_desc">결제 정보요? 충분히 둘러보시고 입력해도 늦지 않았어요.</p>
                 )};
 
                 {type === 'login' && (
-                    <Button facebook>페이스북 로그인</Button>
+                <Button facebook>페이스북 로그인</Button>
                 )}
                 
             </form>

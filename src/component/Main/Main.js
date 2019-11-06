@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Header from '../common/Header';
 import Nav from '../common/Nav';
 
-import '../Main/MainSample.css';
+import './MainSample.css';
 
 const MainBlock = styled.div`
     height: 100%;
@@ -22,7 +22,6 @@ const Main =({children}) => {
             <MainBox>
                 {children}
             </MainBox>
-            
         </MainBlock>
     );
 }

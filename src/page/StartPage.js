@@ -1,5 +1,5 @@
 import React from 'react';
-import Start from '../component/Start/Start';
+import Start from '../component/start/Start';
 
 
 

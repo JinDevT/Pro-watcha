@@ -1,6 +1,6 @@
 import React from 'react';
-import SignTemplate from '../component/Sign/SignTemplate';
-import SignInForm from '../containers/Sign/SignInForm';
+import SignTemplate from '../component/sign/SignTemplate';
+import SignInForm from '../containers/sign/SignInForm';
 
 const SignInPage = () => {
     return (

@@ -1,23 +1,83 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Slide from './Slide';
 
 
+const SliderBlock =  styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
+const SliderWrapper = styled.div`
+    position: relative;
+    height: 100%;
+    width: 100%;
+`;
+
+const LeftArrowBlock = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: 40px;
+    heigh: 40px;
+    z-index: 999;
+    &:before {
+      content:'';
+      position:absolute; 
+      display:block; 
+      top:7px; 
+      left:7px; 
+      height:20px; 
+      width:20px; 
+      border:3px solid #adb5bd; 
+      border-right-width:0; 
+      border-bottom-width:0; 
+      transform:rotate(-45deg);
+      cursor:pointer;
+    }
+    
+    
+`;
+
+const RightArrowBlock = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 40px;
+  heigh: 40px;
+  z-index: 999;
+  &:before {
+    content:'';
+    position:absolute; 
+    display:block; 
+    top:7px; 
+    right:7px; 
+    height:20px; 
+    width:20px; 
+    border:3px solid #adb5bd; 
+    border-left-width:0; 
+    border-top-width:0; 
+    transform:rotate(-45deg);
+    cursor:pointer;
+  }
+`;
+
+// 이전버튼
 const LeftArrow = (props) => {
     return (
-      <div className="backArrow arrow" onClick={props.goToPrevSlide}>
-        <i className="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-      </div>
+      <LeftArrowBlock onClick={props.goToPrevSlide}/>
     );
   }
-  
-  
-  const RightArrow = (props) => {
-    return (
-      <div className="nextArrow arrow" onClick={props.goToNextSlide}>
-        <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
-      </div>
-    );
-  }
+
+// 다음버튼
+const RightArrow = (props) => {
+  return (
+    <RightArrowBlock onClick={props.goToNextSlide}/>
+  );
+}
 
 class Slider extends Component {
     constructor(props) {
@@ -45,7 +105,7 @@ class Slider extends Component {
       }
     }
     
-    //이전버튼
+    //이전버튼 로직
     goToPrevSlide = () => {
       if(this.state.currentIndex === 0)
         return;
@@ -56,7 +116,7 @@ class Slider extends Component {
       }))
     }
     
-    //다음버튼
+    //다음버튼 로직
     goToNextSlide = () => {
       if(this.state.currentIndex === this.state.content.length - 1) {
         return this.setState({
@@ -69,7 +129,8 @@ class Slider extends Component {
         translateValue: prevState.translateValue + -(this.slideWidth())
       }));
     }
-  
+    
+    //slide width
     slideWidth = () => {
        return document.querySelector('.slide').clientWidth
     }
@@ -77,8 +138,8 @@ class Slider extends Component {
     render() {
       const { content } = this.state;
       return (
-        <div className="slider">
-          <div className="slider-wrapper"
+        <SliderBlock>
+          <SliderWrapper
             style={{
               transform: `translateX(${this.state.translateValue}px)`,
               transition: 'transform ease-out 0.5s'
@@ -93,16 +154,10 @@ class Slider extends Component {
                   />
                 ))
               }
-          </div>
-  
-          <LeftArrow
-           goToPrevSlide={this.goToPrevSlide}
-          />
-  
-          <RightArrow
-           goToNextSlide={this.goToNextSlide}
-          />
-        </div>
+          </SliderWrapper>
+          <LeftArrow goToPrevSlide={this.goToPrevSlide}/>
+          <RightArrow goToNextSlide={this.goToNextSlide}/>
+        </SliderBlock>
       );
     }
   }
