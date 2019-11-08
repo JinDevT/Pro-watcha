@@ -38,8 +38,6 @@ const LeftArrowBlock = styled.div`
       transform:rotate(-45deg);
       cursor:pointer;
     }
-    
-    
 `;
 
 const RightArrowBlock = styled.div`

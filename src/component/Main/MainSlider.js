@@ -2,11 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Slider from './Slider';
 
-import './MainSample.css';
-
-
-
-
 
 const MainSlideBlock = styled.div`
     position: relative;
@@ -28,11 +23,7 @@ const MainSlideBlock = styled.div`
         height: 100%;
    }
 `;
-
-
-
 const MainSlider = () => {
-    
     return (
         <MainSlideBlock>
             <div className="wrap">
@@ -41,8 +32,8 @@ const MainSlider = () => {
                     <Slider/>
                 </div>
             </div>
+            
         </MainSlideBlock>
     );
 }
-
 export default MainSlider;
