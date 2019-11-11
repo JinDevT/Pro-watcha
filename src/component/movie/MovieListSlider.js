@@ -30,14 +30,18 @@ const MovieTitleBox = styled.div`
 
 const MovieListBox = styled.div`
     padding: 0 50px 20px;
-`;
+    .movie_ul {
+        display: flex;
+        align-items: center;
+        overflow-y: hidden;
+    }
 
-const MovieUl = styled.ul`
-    & > li {
+    .movie_ul > li {
         display: inline-block;
         padding: 0 2px;
         width: 250px; /* 임시로 너비 지정.*/
     }
+
     .movie_detail_move {
         display: block;
     }
@@ -69,6 +73,8 @@ const MovieUl = styled.ul`
 
 
 
+
+
 const MovieListSlider = () => {
    
     return(
@@ -79,7 +85,7 @@ const MovieListSlider = () => {
                     <Link to='/' className="all_view">모두보기 ></Link>
                 </MovieTitleBox>
                 <MovieListBox>
-                    <MovieUl>
+                    <div className="movie_ul">
                         <li>
                             <Link to='/' className="movie_detail_move">
                                 <div className="title_li_box">
@@ -128,7 +134,7 @@ const MovieListSlider = () => {
                                 </div>
                             </Link>
                         </li>
-                    </MovieUl>
+                    </div>
                 </MovieListBox>
             </MoviSliderBlock>
 
