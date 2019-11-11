@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 const MoviSliderBlock = styled.div`
     height: 100%;
 `;
@@ -66,9 +67,12 @@ const MovieUl = styled.ul`
     }
 `;
 
+
+
 const MovieListSlider = () => {
+   
     return(
-        
+            // 슬라이더 근데 왜안도ㅑ..
             <MoviSliderBlock>
                 <MovieTitleBox>
                     <h3>왓플인기작</h3>

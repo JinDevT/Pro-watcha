@@ -11,6 +11,8 @@ const MoviListBlock = styled.div`
     margin-top: -65px;
 `;
 
+
+
 const MovieList = ({children}) => {
     return(
         <MoviListBlock>

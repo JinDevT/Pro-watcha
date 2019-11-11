@@ -8,12 +8,14 @@ const NavBlock = styled.nav`
     position: fixed;
     z-index: 9999;
     width: 100%;
-    height: 100px;
+    height: 70px;
     padding: 0 50px;
     ${props =>
         props.main &&
         css`
             top: 56px;
+            background-color: black;
+            opacity: 0.7;
         `}
     
     &:after {
@@ -55,7 +57,7 @@ const ListLi =  styled.li`
         display: inline-block;
         height: 32px;
         padding: 0 15px;
-        margin-top: 35px;
+        margin-top: 19px;
         line-height: 32px;
         border-radius: 30px;
         text-align: center;
@@ -64,11 +66,9 @@ const ListLi =  styled.li`
     }
 `;
 
-
-
 const Nav = props => {
     return (
-        <NavBlock {...props}>
+        <NavBlock {...props} >
             <LeftNav>
                 <Link to='/' className="logo" ></Link>
             </LeftNav>

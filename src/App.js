@@ -4,7 +4,7 @@ import './assets/css/reset.css';
 import HomePage from './page/HomePage.js';
 import StartPage from './page/StartPage.js';
 import SignUpPage from './page/SignUpPage';
-import SignInPage from './page/SignInPage';
+//import SignInPage from './page/SignInPage';
 import MainPage from './page/MainPage.js';
 
 
