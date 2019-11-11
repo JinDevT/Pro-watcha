@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Slider from "react-slick";
 
 
 const MoviSliderBlock = styled.div`
@@ -34,6 +35,18 @@ const MovieListBox = styled.div`
         display: flex;
         align-items: center;
         overflow-y: hidden;
+        &::-webkit-scrollbar {
+            background: none;
+            border: 1px solid rgb(48, 48, 48); 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgb(85, 85, 85);
+            border-radius: 30px;
+        }
+    
+        &:hover .movie {
+            opacity: .3;
+        }
     }
 
     .movie_ul > li {
@@ -73,70 +86,71 @@ const MovieListBox = styled.div`
 
 
 
-
-
 const MovieListSlider = () => {
-   
     return(
-            // 슬라이더 근데 왜안도ㅑ..
-            <MoviSliderBlock>
-                <MovieTitleBox>
-                    <h3>왓플인기작</h3>
-                    <Link to='/' className="all_view">모두보기 ></Link>
-                </MovieTitleBox>
-                <MovieListBox>
-                    <div className="movie_ul">
-                        <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div className="movie_img_box">
-                                        <img src="" className="movie_img"/>
+        
+            
+
+            
+                <MoviSliderBlock>
+                    <MovieTitleBox>
+                        <h3>왓플인기작</h3>
+                        <Link to='/' className="all_view">모두보기 ></Link>
+                    </MovieTitleBox>
+                    <MovieListBox>
+                        <ul className="movie_ul">
+                            <li>
+                                <Link to='/' className="movie_detail_move">
+                                    <div className="title_li_box">
+                                        <div className="movie_img_box">
+                                            <img src="" className="movie_img"/>
+                                        </div>
+                                        <div className="movie_tit">
+                                            <span>무비이름</span>
+                                        </div>
                                     </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/' className="movie_detail_move">
+                                    <div className="title_li_box">
+                                        <div div className="movie_img_box">
+                                            <img src="" className="movie_img"/>
+                                        </div>
+                                        <div className="movie_tit">
+                                            <span>무비이름</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img"/>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/' className="movie_detail_move">
+                                    <div className="title_li_box">
+                                        <div div className="movie_img_box">
+                                            <img src="" className="movie_img"/>
+                                        </div>
+                                        <div className="movie_tit">
+                                            <span>무비이름</span>
+                                        </div>
                                     </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/' className="movie_detail_move">
+                                    <div className="title_li_box">
+                                        <div div className="movie_img_box">
+                                            <img src="" className="movie_img"/>
+                                        </div>
+                                        <div className="movie_tit">
+                                            <span>무비이름</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img"/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img"/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-                    </div>
-                </MovieListBox>
-            </MoviSliderBlock>
+                                </Link>
+                            </li>
+                        </ul>
+                    </MovieListBox>
+                </MoviSliderBlock>
+            
 
     );
 }
