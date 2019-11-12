@@ -1,71 +1,127 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
+
+import './Movie.css';
 
 export default class Responsive extends Component {
   render() {
-    var settings = {
-      dots: true,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      initialSlide: 0,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    };
+ 
     return (
-      <div>
-        <h2> Responsive </h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+      <div class="test">
+        <h1 class="title">Title Category</h1>
+        <div class="slider">
+          <div class="slider-content">
+            <div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/nature/3" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/nature/3" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/nature/4" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/nature/4" alt="" />
+                </div>
+              </div>
+            </div><div class="testslide">
+              <div class="slide-content">
+                <img src="http://www.lorempixel.com/480/320/nature/1" alt="" />
+                <div class="onhover">
+                  <img src="http://www.lorempixel.com/480/320/nature/1" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-        </Slider>
+        </div>
+        <div class="control-pagination">
+          <span class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+          <span class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
       </div>
     );
   }

@@ -80,3 +80,79 @@ h3 {
     color: #fff;
 }
  */
+
+
+  .title{
+    font-size: 1.2em;
+    font-family: Arial;
+    color: #eee;
+    margin: 30px 0 10px;
+  }
+  .test{
+    width: 1400px;
+    margin: 0 auto;
+  }
+  /* Main */
+  .slider{
+    width: 100%;
+  }
+  .slider-content{
+    width: 100%;
+    white-space: nowrap;
+    transition: all 0.5s;
+  }
+  .testslide{
+    width: 16.66666666666667%;
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+  }
+  .slider .testslide:nth-child(6n){
+    transform-origin: left center;
+  }
+  .slider .testslide:nth-child(6n+6){
+    transform-origin: right center;
+  }
+  .slide-content{
+    width: 100%;
+    padding: 2.5px;
+    box-sizing: border-box;
+  }
+  .testslide img{
+    width: 100%;
+    display: block;
+  }
+  .testslide:nth-child(6n+1) .onhover{
+    transform: translate(2.5px, -50%);
+    left: 0%;
+  }
+  .testslide:nth-child(6n+6) .onhover{
+    transform: translate(-2.5px, -50%);
+    right: 0%;
+    left: initial;
+  }
+  .testslide .onhover{
+    width: calc(100% - 5px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+  .onhover img{
+    width: 100%;
+  }
+  
+  /* Control Pagination */
+  .control-pagination{
+    margin: 30px 0;
+  }
+  .prev, .next{
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .prev:hover, .next:hover{
+    color: #ccc;
+  }
