@@ -2,127 +2,126 @@ import React, { Component } from "react";
 
 import './Movie.css';
 
-export default class Responsive extends Component {
+
+
+ class Responsive extends Component {
+   // Pagination
   render() {
  
     return (
-      <div class="test">
-        <h1 class="title">Title Category</h1>
-        <div class="slider">
-          <div class="slider-content">
-            <div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/1" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/2" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/3" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/4" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/5" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/people/6" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/nature/3" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/nature/3" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/nature/4" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/nature/4" alt="" />
-                </div>
-              </div>
-            </div><div class="testslide">
-              <div class="slide-content">
-                <img src="http://www.lorempixel.com/480/320/nature/1" alt="" />
-                <div class="onhover">
-                  <img src="http://www.lorempixel.com/480/320/nature/1" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="control-pagination">
-          <span class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
-          <span class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <div class="container">
+  <div class="arrow-left">
+    <i class="icon-angle-left"></i>
+  </div>
+ <div class="item item-1">
+    <div class="body-item">
+      <div class="body-item-1">
+        <div class="play">
+          <i class="icon-play"></i>
         </div>
       </div>
+      <div class="title body-item-2">Breaking Bad</div>
+      <div class="properties body-item-3">
+        <span class="match">% 98 Match</span>
+        <span class="year">2012</span>
+        <span class="age-limit">13+</span>
+        <span class="time">2h 13m</span>
+      </div>
+      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
+      <div class="body-item-5">
+        <i class="details-icon icon-chevron-down"></i>
+      </div>
+      <div class="icon-set body-item-6">
+        <i class="icon-thumbs-up"></i>
+        <i class="icon-thumbs-down"></i>
+        <i class="icon-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="item item-2">
+    <div class="body-item">
+      <div class="body-item-1">
+        <div class="play">
+          <i class="icon-play"></i>
+        </div>
+      </div>
+      <div class="title body-item-2">Case de Papel</div>
+      <div class="properties body-item-3">
+        <span class="match">% 98 Match</span>
+        <span class="year">2012</span>
+        <span class="age-limit">13+</span>
+        <span class="time">2h 13m</span>
+      </div>
+      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
+      <div class="body-item-5">
+        <i class="details-icon icon-chevron-down"></i>
+      </div>
+      <div class="icon-set body-item-6">
+        <i class="icon-thumbs-up"></i>
+        <i class="icon-thumbs-down"></i>
+        <i class="icon-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="item item-3">
+    <div class="body-item">
+      <div class="body-item-1">
+        <div class="play">
+          <i class="icon-play"></i>
+        </div>
+      </div>
+      <div class="title body-item-2">Black Mirror</div>
+      <div class="properties body-item-3">
+        <span class="match">% 98 Match</span>
+        <span class="year">2012</span>
+        <span class="age-limit">13+</span>
+        <span class="time">2h 13m</span>
+      </div>
+      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
+      <div class="body-item-5">
+        <i class="details-icon icon-chevron-down"></i>
+      </div>
+      <div class="icon-set body-item-6">
+        <i class="icon-thumbs-up"></i>
+        <i class="icon-thumbs-down"></i>
+        <i class="icon-plus"></i>
+      </div>
+    </div>
+  </div>
+  
+  <div class="item item-4">
+    <div class="body-item">
+      <div class="body-item-1">
+        <div class="play">
+          <i class="icon-play"></i>
+        </div>
+      </div>
+      <div class="title body-item-2">Bojark Horseman</div>
+      <div class="properties body-item-3">
+        <span class="match">% 95 Match</span>
+        <span class="year">2013</span>
+        <span class="age-limit">18+</span>
+        <span class="time">1h 13m</span>
+      </div>
+      <p class="description body-item-4">A humanoid horse, BoJack Horseman -- lost in a sea of self-loathing and...</p>
+      <div class="body-item-5">
+        <i class="details-icon icon-chevron-down"></i>
+      </div>
+      <div class="icon-set body-item-6">
+        <i class="icon-thumbs-up"></i>
+        <i class="icon-thumbs-down"></i>
+        <i class="icon-plus"></i>
+      </div>
+    </div>
+  </div>
+  <div class="arrow-right">
+    <i class="icon-angle-right"></i>
+  </div>
+</div>
     );
   }
 }
+
+export default Responsive;

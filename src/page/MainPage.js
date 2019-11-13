@@ -10,7 +10,7 @@ const MainPage = () => {
         <Main>
             <MainSlider/>
             <MoviList>
-                <Test/>
+                <MovieListSlider/>
             </MoviList>  
             
         </Main>

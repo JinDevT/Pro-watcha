@@ -32,15 +32,30 @@ const MovieTitleBox = styled.div`
 const MovieListBox = styled.div`
     padding: 0 50px 20px;
     .movie_ul {
-        display: flex;
+         display: flex;
         align-items: center;
+        // overflow-y: hidden;
+       
+        width: 100%;
+        white-space: nowrap;
+        transition: all 0.5s;
+        padding: 15px 0;
         overflow-y: hidden;
+        &::-webkit-scrollbar {
+            background: none;
+            border: 1px solid #303030;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 30px;
+        }
     }
 
     .movie_ul > li {
-        display: inline-block;
+       
         padding: 0 2px;
-        width: 250px; /* 임시로 너비 지정.*/
+        transition: all .2s ease-in;
+        cursor: pointer;
     }
 
     .movie_detail_move {
@@ -50,11 +65,29 @@ const MovieListBox = styled.div`
 
     }
     .movie_img_box {
-        width: 100%;
-        height: 0;
         position: relative;
         overflow: hidden;
-        padding: 70px 0;
+        width: 15vw;
+        height: 10vw;
+        background-size: 100% 100%;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: 0.5s;
+        color: white;
+        &:hover {
+            width: 20vw;
+            height: 13vw;
+            transition: 0.5s;
+            opacity: 1;
+            transition-delay: 0.3s;
+            .movie_item {
+                visibility: visible;
+            }
+            .movie_item_1 {
+                width: 20vw;
+            }
+        }
+
     }
     .movie_img {
         position: absolute;
@@ -62,8 +95,29 @@ const MovieListBox = styled.div`
         left: 0;
         bottom: 0;
         right: 0;
-        width: 100%;
-        background-color: #fff;
+        background-color: #141414;
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: 50% 60%;
+        
+    }
+
+    .movie_item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity:0;
+        visibility: hidden;
+        &:hover {
+            width: 20vw;
+            height: 13vw;
+            opacity: 1;
+            transition: 0.4s;
+            transition-delay: 0.4s;
+            
+        }
     }
     .movie_tit {
         margin-top: 5px;
@@ -84,64 +138,166 @@ const MovieListSlider = () => {
                 <MovieListBox>
                     <ul className="movie_ul">
                         <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div className="movie_img_box">
-                                        <img src="" className="movie_img" alt=''/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                            <div className="title_li_box">
+                                <div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </Link>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
+                            
                         </li>
                         <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img" alt=''/>  
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </Link>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img" alt=''/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
-                                    </div>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
+                                    </div>   
                                 </div>
-                            </Link>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img" alt=''/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </Link>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <Link to='/' className="movie_detail_move">
-                                <div className="title_li_box">
-                                    <div div className="movie_img_box">
-                                        <img src="" className="movie_img" alt=''/>
-                                    </div>
-                                    <div className="movie_tit">
-                                        <span>무비이름</span>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </Link>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="title_li_box">
+                                <div div className="movie_img_box">
+                                    <div className="movie_img" />
+                                    <div className="movie_item">
+                                        <div className="movie_item_1">
+                                            <div className="play">
+                                            </div>
+                                        </div>
+                                        <div className="movie_item_2">
+                                            <p>영화제목</p>
+                                            <p>상영시간</p>
+                                        </div>
+                                        <div className="movie_item_3">
+                                            <p>영화소개</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="movie_tit">
+                                    <span>무비이름</span>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </MovieListBox>
