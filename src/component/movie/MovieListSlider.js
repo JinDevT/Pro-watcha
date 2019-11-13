@@ -32,7 +32,7 @@ const MovieTitleBox = styled.div`
 const MovieListBox = styled.div`
     padding: 0 50px 20px;
     .movie_ul {
-         display: flex;
+        display: flex;
         align-items: center;
         // overflow-y: hidden;
        
@@ -75,17 +75,15 @@ const MovieListBox = styled.div`
         transition: 0.5s;
         color: white;
         &:hover {
-            width: 20vw;
-            height: 13vw;
+            width: 22vw;
+            height: 15vw;
             transition: 0.5s;
             opacity: 1;
             transition-delay: 0.3s;
             .movie_item {
                 visibility: visible;
             }
-            .movie_item_1 {
-                width: 20vw;
-            }
+           
         }
 
     }
@@ -95,7 +93,7 @@ const MovieListBox = styled.div`
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: #141414;
+        background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1564113416/qc8txgzqiwyftqbklzdd.jpg"); background-size: cover; background-repeat: no-repeat; background-position: 50% 60%;
         background-size: cover; 
         background-repeat: no-repeat; 
         background-position: 50% 60%;
@@ -118,6 +116,45 @@ const MovieListBox = styled.div`
             transition-delay: 0.4s;
             
         }
+        &_1 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &_2,&_3,&_4 {
+            align-self: flex-start;
+            font-size: 18px;
+            margin-bottom: 0.5vw;
+        }
+       
+        .play {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon-play {
+              position: relative;
+              justify-content: center;
+              width: 3vw;
+              height: 3vw;
+              margin-top:3vw;
+              border-radius: 40px;
+              background: rgba(0, 0, 0, 0.5);
+              border: 2px solid #fff;
+              &:before {
+                content:''; 
+                height:0; 
+                width:0; 
+                display:block; 
+                border:10px transparent solid; 
+                border-right-width:0; 
+                border-left-color:#c92a2a; 
+                position:absolute; 
+                top:50%; 
+                left:54%;
+                transform:translate(-50%, -50%);
+              }
+            }
+          }
     }
     .movie_tit {
         margin-top: 5px;
@@ -144,14 +181,17 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
+                                            <p className="movie_title">영화제목</p>
                                         </div>
                                         <div className="movie_item_3">
-                                            <p>영화소개</p>
+                                            <p className="movie_desc">영회시간</p>
+                                        </div>
+                                        <div className="movie_item_4">
+                                            <p className="movie_info">영화소개</p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,6 +208,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -191,6 +232,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -214,6 +256,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -237,6 +280,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -260,6 +304,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -283,6 +328,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="play">
+                                                <i className="icon-play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
