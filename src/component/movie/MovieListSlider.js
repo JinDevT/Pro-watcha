@@ -180,28 +180,33 @@ const MovieListBox = styled.div`
                     -webkit-transform:rotate(-45deg);
                     -moz-transform:rotate(-45deg);
                     -o-transform:rotate(-45deg);
-                    -ms-transform:rotate(-45deg);   
+                    -ms-transform:rotate(-45deg);
                 }
+                // hover 했을 때, 상속받아서 사용할 방법은 없을까?
+                &:hover:before {
+                    content:'';
+                    position:absolute;
+                    bottom:15px;
+                    left:7px; 
+                    height:20px; 
+                    width:20px; 
+                    display:block; 
+                    border:3px solid #000; 
+                    border-right-width:0; 
+                    border-top-width:0; 
+                    transform:rotate(-45deg);
+                    -webkit-transform:rotate(-45deg);
+                    -moz-transform:rotate(-45deg);
+                    -o-transform:rotate(-45deg);
+                    -ms-transform:rotate(-45deg); 
+                }
+               
             }
     }
     .movie_tit {
         margin-top: 5px;
         font-size: 15px;
         color: #fff;
-    }
-
-    .test {
-        height: 35.15vw;
-    opacity: 1;
-        position: relative;
-    background: #0B0C0D;
-  
-    padding-left: 4%;
-    border-top: 1px solid #191a1c;
-    border-bottom: 1px solid #191a1c;
-    
-    -webkit-transition: height 0.54s cubic-bezier(0.5,0,0.1,1) 0s,opacity 0.44s cubic-bezier(0.5,0,0.1,1) 0.1s;
-    transition: height 0.54s cubic-bezier(0.5,0,0.1,1) 0s,opacity 0.44s cubic-bezier(0.5,0,0.1,1) 0.1s;
     }
 `;
 
@@ -233,36 +238,7 @@ const MovieListSlider = () => {
                                     <div className="movie_item">
                                         <div className="movie_item_1">
                                             <div className="movie_play">
-                                                <i className="icon_play"/>
-                                            </div>
-                                        </div>
-                                        <div className="movie_item_2">
-                                            <p className="movie_title">영화제목</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p className="movie_desc">영회시간</p>
-                                        </div>
-                                        <div className="movie_item_4">
-                                            <p className="movie_info">영화소개</p>
-                                        </div>
-                                        <div className="movie_item_5" onClick={() => showDetail()}>
-                                            <i className="icon_detail"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="movie_play">
-                                                <i className="icon_play"/>
+                                                <Link to='/' className="icon_play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
