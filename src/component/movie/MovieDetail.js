@@ -101,9 +101,6 @@ const MovieDetailBlock = styled.div`
     }
 `;
 
-
-
-
 const MovieDetail = ({clazzName, show, onClick}) => {
     return(
         show ?
