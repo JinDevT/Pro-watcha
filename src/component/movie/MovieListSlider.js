@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import MovieDetail from './MovieDetail';
 
 
 const MoviSliderBlock = styled.div`
@@ -97,7 +98,6 @@ const MovieListBox = styled.div`
         background-size: cover; 
         background-repeat: no-repeat; 
         background-position: 50% 60%;
-        
     }
 
     .movie_item {
@@ -109,8 +109,8 @@ const MovieListBox = styled.div`
         opacity:0;
         visibility: hidden;
         &:hover {
-            width: 20vw;
-            height: 13vw;
+            width: 22vw;
+            height: 15vw;
             opacity: 1;
             transition: 0.4s;
             transition-delay: 0.4s;
@@ -123,15 +123,20 @@ const MovieListBox = styled.div`
         }
         &_2,&_3,&_4 {
             align-self: flex-start;
-            font-size: 18px;
+            font-size: 1.2rem;
             margin-bottom: 0.5vw;
+            padding: 0 15px;
+        }
+        &_5 {
+            margin-bottom: 0.5vw;
+            text-align: center;
         }
        
-        .play {
+        .movie_play {
             display: flex;
             justify-content: center;
             align-items: center;
-            .icon-play {
+            .icon_play {
               position: relative;
               justify-content: center;
               width: 3vw;
@@ -155,17 +160,64 @@ const MovieListBox = styled.div`
               }
             }
           }
+          .icon_detail {
+                position:relative;
+                display:block;
+                height:40px;
+                width:40px; 
+                &:before {
+                    content:'';
+                    position:absolute;
+                    bottom:15px;
+                    left:7px; 
+                    height:20px; 
+                    width:20px; 
+                    display:block; 
+                    border:3px solid #fff; 
+                    border-right-width:0; 
+                    border-top-width:0; 
+                    transform:rotate(-45deg);
+                    -webkit-transform:rotate(-45deg);
+                    -moz-transform:rotate(-45deg);
+                    -o-transform:rotate(-45deg);
+                    -ms-transform:rotate(-45deg);   
+                }
+            }
     }
     .movie_tit {
         margin-top: 5px;
         font-size: 15px;
         color: #fff;
     }
+
+    .test {
+        height: 35.15vw;
+    opacity: 1;
+        position: relative;
+    background: #0B0C0D;
+  
+    padding-left: 4%;
+    border-top: 1px solid #191a1c;
+    border-bottom: 1px solid #191a1c;
+    
+    -webkit-transition: height 0.54s cubic-bezier(0.5,0,0.1,1) 0s,opacity 0.44s cubic-bezier(0.5,0,0.1,1) 0.1s;
+    transition: height 0.54s cubic-bezier(0.5,0,0.1,1) 0s,opacity 0.44s cubic-bezier(0.5,0,0.1,1) 0.1s;
+    }
 `;
 
 
 
 const MovieListSlider = () => {
+
+    const [ detail, setDetail ] = useState(false);
+
+    const showDetail = () => {
+        setDetail(true);
+    }
+
+    const closeDetail = () => {
+        setDetail(false);
+    }
     return(
             <MoviSliderBlock>
                 <MovieTitleBox>
@@ -180,8 +232,8 @@ const MovieListSlider = () => {
                                     <div className="movie_img" />
                                     <div className="movie_item">
                                         <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
+                                            <div className="movie_play">
+                                                <i className="icon_play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
@@ -193,30 +245,8 @@ const MovieListSlider = () => {
                                         <div className="movie_item_4">
                                             <p className="movie_info">영화소개</p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                            
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
-                                            </div>
-                                        </div>
-                                        <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p>영화소개</p>
+                                        <div className="movie_item_5" onClick={() => showDetail()}>
+                                            <i className="icon_detail"/>
                                         </div>
                                     </div>
                                 </div>
@@ -227,116 +257,25 @@ const MovieListSlider = () => {
                         </li>
                         <li>
                             <div className="title_li_box">
-                                <div div className="movie_img_box">
+                                <div className="movie_img_box">
                                     <div className="movie_img" />
                                     <div className="movie_item">
                                         <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
+                                            <div className="movie_play">
+                                                <i className="icon_play"/>
                                             </div>
                                         </div>
                                         <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
+                                            <p className="movie_title">영화제목</p>
                                         </div>
                                         <div className="movie_item_3">
-                                            <p>영화소개</p>
+                                            <p className="movie_desc">영회시간</p>
                                         </div>
-                                    </div>   
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
-                                            </div>
+                                        <div className="movie_item_4">
+                                            <p className="movie_info">영화소개</p>
                                         </div>
-                                        <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p>영화소개</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
-                                            </div>
-                                        </div>
-                                        <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p>영화소개</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
-                                            </div>
-                                        </div>
-                                        <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p>영화소개</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="movie_tit">
-                                    <span>무비이름</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="title_li_box">
-                                <div div className="movie_img_box">
-                                    <div className="movie_img" />
-                                    <div className="movie_item">
-                                        <div className="movie_item_1">
-                                            <div className="play">
-                                                <i className="icon-play"/>
-                                            </div>
-                                        </div>
-                                        <div className="movie_item_2">
-                                            <p>영화제목</p>
-                                            <p>상영시간</p>
-                                        </div>
-                                        <div className="movie_item_3">
-                                            <p>영화소개</p>
+                                        <div className="movie_item_5" onClick={() => showDetail()}>
+                                            <i className="icon_detail"/>
                                         </div>
                                     </div>
                                 </div>
@@ -346,6 +285,11 @@ const MovieListSlider = () => {
                             </div>
                         </li>
                     </ul>
+                    <MovieDetail
+                        clazzName={"moovieContainer " + (detail ? "show" : "hide")}
+                        show={detail}
+                        onClick={() => closeDetail()}
+                    />
                 </MovieListBox>
             </MoviSliderBlock>
     );
