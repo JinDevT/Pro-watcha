@@ -100,7 +100,7 @@ const MovieDetailBlock = styled.div`
         height: 100%;
     }
 `;
-
+ 
 const MovieDetail = ({clazzName, show, onClick}) => {
     return(
         show ?
