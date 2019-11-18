@@ -1,8 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import MovieDetail from './MovieDetail';
+
+
 
 
 const MoviSliderBlock = styled.div`
@@ -215,6 +218,25 @@ const MovieListBox = styled.div`
 const MovieListSlider = () => {
 
     const [ detail, setDetail ] = useState(false);
+    const [ movie, setMovie ] = useState(null);
+
+    const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
+    const API_URL = `https://api.themoviedb.org/3`;
+    const Genre =`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
+
+    useEffect(() =>{
+        const fetchMovies = async () => {
+            try {
+                setMovie(null);
+                const response = await axios.get(Genre);
+                setMovie(response.data);
+                console.log(response.data);
+            } catch (e) {
+
+            }
+        };
+        fetchMovies();
+    },[]);
 
     const showDetail = () => {
         setDetail(true);
