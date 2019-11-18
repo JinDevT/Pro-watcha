@@ -230,7 +230,7 @@ const MovieListSlider = () => {
                 setMovie(null);
                 const response = await axios.get(Genre);
                 setMovie(response.data);
-               
+                console.log(response.data);
             } catch (e) {
                 throw(e);
             }
@@ -248,7 +248,6 @@ const MovieListSlider = () => {
         setDetail(false);
     }
 
-    console.log(movies);
     return(
             <>
                 { movies.map(movie => (
