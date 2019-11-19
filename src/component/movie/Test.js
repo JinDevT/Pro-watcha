@@ -1,127 +1,47 @@
-import React, { Component } from "react";
-
-import './Movie.css';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
- class Responsive extends Component {
-   // Pagination
-  render() {
- 
-    return (
-      <div class="container">
-  <div class="arrow-left">
-    <i class="icon-angle-left"></i>
-  </div>
- <div class="item item-1">
-    <div class="body-item">
-      <div class="body-item-1">
-        <div class="play">
-          <i class="icon-play"></i>
-        </div>
-      </div>
-      <div class="title body-item-2">Breaking Bad</div>
-      <div class="properties body-item-3">
-        <span class="match">% 98 Match</span>
-        <span class="year">2012</span>
-        <span class="age-limit">13+</span>
-        <span class="time">2h 13m</span>
-      </div>
-      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
-      <div class="body-item-5">
-        <i class="details-icon icon-chevron-down"></i>
-      </div>
-      <div class="icon-set body-item-6">
-        <i class="icon-thumbs-up"></i>
-        <i class="icon-thumbs-down"></i>
-        <i class="icon-plus"></i>
-      </div>
-    </div>
-  </div>
 
-  <div class="item item-2">
-    <div class="body-item">
-      <div class="body-item-1">
-        <div class="play">
-          <i class="icon-play"></i>
-        </div>
-      </div>
-      <div class="title body-item-2">Case de Papel</div>
-      <div class="properties body-item-3">
-        <span class="match">% 98 Match</span>
-        <span class="year">2012</span>
-        <span class="age-limit">13+</span>
-        <span class="time">2h 13m</span>
-      </div>
-      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
-      <div class="body-item-5">
-        <i class="details-icon icon-chevron-down"></i>
-      </div>
-      <div class="icon-set body-item-6">
-        <i class="icon-thumbs-up"></i>
-        <i class="icon-thumbs-down"></i>
-        <i class="icon-plus"></i>
-      </div>
-    </div>
-  </div>
 
-  <div class="item item-3">
-    <div class="body-item">
-      <div class="body-item-1">
-        <div class="play">
-          <i class="icon-play"></i>
-        </div>
-      </div>
-      <div class="title body-item-2">Black Mirror</div>
-      <div class="properties body-item-3">
-        <span class="match">% 98 Match</span>
-        <span class="year">2012</span>
-        <span class="age-limit">13+</span>
-        <span class="time">2h 13m</span>
-      </div>
-      <p class="description body-item-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius alias libero..</p>
-      <div class="body-item-5">
-        <i class="details-icon icon-chevron-down"></i>
-      </div>
-      <div class="icon-set body-item-6">
-        <i class="icon-thumbs-up"></i>
-        <i class="icon-thumbs-down"></i>
-        <i class="icon-plus"></i>
-      </div>
-    </div>
-  </div>
-  
-  <div class="item item-4">
-    <div class="body-item">
-      <div class="body-item-1">
-        <div class="play">
-          <i class="icon-play"></i>
-        </div>
-      </div>
-      <div class="title body-item-2">Bojark Horseman</div>
-      <div class="properties body-item-3">
-        <span class="match">% 95 Match</span>
-        <span class="year">2013</span>
-        <span class="age-limit">18+</span>
-        <span class="time">1h 13m</span>
-      </div>
-      <p class="description body-item-4">A humanoid horse, BoJack Horseman -- lost in a sea of self-loathing and...</p>
-      <div class="body-item-5">
-        <i class="details-icon icon-chevron-down"></i>
-      </div>
-      <div class="icon-set body-item-6">
-        <i class="icon-thumbs-up"></i>
-        <i class="icon-thumbs-down"></i>
-        <i class="icon-plus"></i>
-      </div>
-    </div>
-  </div>
-  <div class="arrow-right">
-    <i class="icon-angle-right"></i>
-  </div>
-</div>
+
+
+
+
+
+const MovieListSlider = () => {
+
+   
+    const [ movies, setMovie ] = useState(null);
+
+    const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
+    const API_URL = `https://api.themoviedb.org/3`;
+    const Genre =`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
+
+    useEffect(() =>{
+        const fetchMovies = async () => {
+            try {
+                setMovie(null);
+                const response = await axios.get(Genre);
+                setMovie(response.data);
+                console.log(response.data);
+            } catch (e) {
+                throw(e);
+            }
+        };
+        fetchMovies();
+    },[]);
+
+    if(!movies) return null
+
+
+    return(
+            <ul>
+                { movies.map(movie => (
+                    <li>{movie.name}</li>
+                ))}
+            </ul>
     );
-  }
 }
 
-export default Responsive;
+export default MovieListSlider;
