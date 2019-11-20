@@ -1,16 +1,21 @@
 import { combineReducers } from 'redux';
-import { all } from 'redux-saga/effects';
-import auth, { authSaga } from './auth';
-import loading from './loading';
+import movie from './movie';
+// import { all } from 'redux-saga/effects';
+// import auth, { authSaga } from './auth';
+// import loading from './loading';
+
+// const rootReducer = combineReducers({
+//     auth,
+//     loading,
+// });
+
+// export function* rootSaga() {
+//     yield all([authSaga()]);
+// }
 
 const rootReducer = combineReducers({
-    auth,
-    loading,
-});
-
-export function* rootSaga() {
-    yield all([authSaga()]);
-}
+    movie
+})
 
 export default rootReducer;
 

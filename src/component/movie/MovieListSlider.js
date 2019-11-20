@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -217,28 +216,28 @@ const MovieListBox = styled.div`
 
 const MovieListSlider = () => {
 
-    const [ detail, setDetail ] = useState(false);
-    const [ movies, setMovie ] = useState(null);
+     const [ detail, setDetail ] = useState(false);
+    // const [ movies, setMovie ] = useState(null);
 
-    const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
-    const API_URL = `https://api.themoviedb.org/3`;
-    const Genre =`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
+    // const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
+    // const API_URL = `https://api.themoviedb.org/3`;
+    // const Genre =`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
 
-    useEffect(() =>{
-        const fetchMovies = async () => {
-            try {
-                setMovie(null);
-                const response = await axios.get(Genre);
-                setMovie(response.data);
-                console.log(response.data);
-            } catch (e) {
-                throw(e);
-            }
-        };
-        fetchMovies();
-    },[]);
+    // useEffect(() =>{
+    //     const fetchMovies = async () => {
+    //         try {
+    //             setMovie(null);
+    //             const response = await axios.get(Genre);
+    //             setMovie(response.data);
+    //             console.log(response.data);
+    //         } catch (e) {
+    //             throw(e);
+    //         }
+    //     };
+    //     fetchMovies();
+    // },[]);
 
-    if(!movies) return null
+    // if(!movies) return null
 
     const showDetail = () => {
         setDetail(true);
@@ -250,10 +249,10 @@ const MovieListSlider = () => {
 
     return(
             <>
-                { movies.map(movie => (
-                    <MoviSliderBlock key={movie.id}>
+                
+                    <MoviSliderBlock >
                         <MovieTitleBox>
-                            <h3>{movie.name}</h3>
+                            <h3>dd</h3>
                             <Link to='/' className="all_view">모두보기 ></Link>
                         </MovieTitleBox>
                         <MovieListBox>
@@ -295,7 +294,7 @@ const MovieListSlider = () => {
                             />
                         </MovieListBox>
                     </MoviSliderBlock>
-                ))}
+               
             </>
     );
 }
