@@ -99,6 +99,7 @@ const MovieListBox = styled.div`
         right: 0;
         width: 100%;
         height: 100%;
+        border: 1px solid #fff;
     }
 
     .movie_item {

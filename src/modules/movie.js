@@ -19,7 +19,7 @@ export const fetchActionData = (data) => {
    
 export const fetchAction = () => {
     return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`)
+        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35`)
         .then(response => {
             dispatch(fetchActionData(response.data))
         })
