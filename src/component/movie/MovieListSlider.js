@@ -7,6 +7,7 @@ import MovieDetail from './MovieDetail';
 
 
 
+
 const MoviSliderBlock = styled.div`
     height: 100%;
 `;
@@ -96,10 +97,8 @@ const MovieListBox = styled.div`
         left: 0;
         bottom: 0;
         right: 0;
-        background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1564113416/qc8txgzqiwyftqbklzdd.jpg"); background-size: cover; background-repeat: no-repeat; background-position: 50% 60%;
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-position: 50% 60%;
+        width: 100%;
+        height: 100%;
     }
 
     .movie_item {
@@ -214,86 +213,60 @@ const MovieListBox = styled.div`
 
 
 
-const MovieListSlider = () => {
-
-     const [ detail, setDetail ] = useState(false);
-    // const [ movies, setMovie ] = useState(null);
-
-    // const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
-    // const API_URL = `https://api.themoviedb.org/3`;
-    // const Genre =`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
-
-    // useEffect(() =>{
-    //     const fetchMovies = async () => {
-    //         try {
-    //             setMovie(null);
-    //             const response = await axios.get(Genre);
-    //             setMovie(response.data);
-    //             console.log(response.data);
-    //         } catch (e) {
-    //             throw(e);
-    //         }
-    //     };
-    //     fetchMovies();
-    // },[]);
-
-    // if(!movies) return null
-
-    const showDetail = () => {
-        setDetail(true);
-    }
-
-    const closeDetail = () => {
-        setDetail(false);
-    }
-
+const MovieListSlider = ({movies}) => {
+    console.log(movies);
+    const [ detail, setDetail ] = useState(false);
+    const showDetail = () => {setDetail(true);}
+    const closeDetail = () => {setDetail(false);}
     return(
             <>
-                
-                    <MoviSliderBlock >
-                        <MovieTitleBox>
-                            <h3>dd</h3>
-                            <Link to='/' className="all_view">모두보기 ></Link>
-                        </MovieTitleBox>
-                        <MovieListBox>
-                            <ul className="movie_ul">
-                                <li>
-                                    <div className="title_li_box">
-                                        <div className="movie_img_box">
-                                            <div className="movie_img" />
-                                            <div className="movie_item">
-                                                <div className="movie_item_1">
-                                                    <div className="movie_play">
-                                                        <Link to='/' className="icon_play"/>
-                                                    </div>
-                                                </div>
-                                                <div className="movie_item_2">
-                                                    <p className="movie_title">영화제목</p>
-                                                </div>
-                                                <div className="movie_item_3">
-                                                    <p className="movie_desc">영회시간</p>
-                                                </div>
-                                                <div className="movie_item_4">
-                                                    <p className="movie_info">영화소개</p>
-                                                </div>
-                                                <div className="movie_item_5" onClick={() => showDetail()}>
-                                                    <i className="icon_detail"/>
+                <MoviSliderBlock >
+                    <MovieTitleBox>
+                        <h3>cc</h3>
+                        <Link to='/' className="all_view">모두보기 ></Link>
+                    </MovieTitleBox>
+                    <MovieListBox>
+                        <ul className="movie_ul">
+                            { movies.results && movies.results.map(movie => (
+                                <li key={movie.id}>
+                                <div className="title_li_box">
+                                    <div className="movie_img_box">
+                                        <img className="movie_img" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title}/>
+                                        <div className="movie_item">
+                                            <div className="movie_item_1">
+                                                <div className="movie_play">
+                                                    <Link to='/' className="icon_play"/>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="movie_tit">
-                                            <span>무비이름</span>
+                                            <div className="movie_item_2">
+                                                <p className="movie_title">{movie.title}</p>
+                                            </div>
+                                            <div className="movie_item_3">
+                                                <p className="movie_desc">영회시간</p>
+                                            </div>
+                                            <div className="movie_item_4">
+                                                <p className="movie_info">{movie.overview}</p>
+                                            </div>
+                                            <div className="movie_item_5" onClick={() => showDetail()}>
+                                                <i className="icon_detail"/>
+                                            </div>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                            <MovieDetail
-                                clazzName={"moovieContainer " + (detail ? "show" : "hide")}
-                                show={detail}
-                                onClick={() => closeDetail()}
-                            />
-                        </MovieListBox>
-                    </MoviSliderBlock>
+                                    <div className="movie_tit">
+                                        <span>{movie.title}</span>
+                                    </div>
+                                </div>
+                            </li>
+                            ))}
+                            
+                        </ul>
+                        <MovieDetail
+                            clazzName={"moovieContainer " + (detail ? "show" : "hide")}
+                            show={detail}
+                            onClick={() => closeDetail()}
+                        />
+                    </MovieListBox>
+                </MoviSliderBlock>
                
             </>
     );

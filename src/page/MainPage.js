@@ -2,7 +2,7 @@ import React from 'react';
 import Main from '../component/main/Main';
 import MainSlider from '../component/main/MainSlider';
 import MoviList from '../component/movie/MovieList';
-import MovieListSlider from '../component/movie/MovieListSlider';
+import MovieContainer from '../containers/movie/MovieContainer';
 
 
 const MainPage = () => {
@@ -10,7 +10,7 @@ const MainPage = () => {
         <Main>
             <MainSlider/>
             <MoviList>
-                <MovieListSlider />
+                <MovieContainer />
             </MoviList>  
             
         </Main>
