@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
-import movie from './movie';
+import actionReducer from './actionReducer';
+import comedyReducer from './comedyReducer';
+
 // import { all } from 'redux-saga/effects';
 // import auth, { authSaga } from './auth';
 // import loading from './loading';
@@ -14,7 +16,9 @@ import movie from './movie';
 // }
 
 const rootReducer = combineReducers({
-    movie
+    action: actionReducer,
+    comedy: comedyReducer
+    
 })
 
 export default rootReducer;

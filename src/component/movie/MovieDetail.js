@@ -101,14 +101,14 @@ const MovieDetailBlock = styled.div`
     }
 `;
  
-const MovieDetail = ({clazzName, show, onClick}) => {
+const MovieDetail = ({clazzName, show, onClick, title, backImg}) => {
     return(
         show ?
-            <MovieDetailBlock className={clazzName} onClick={onClick}>
+            <MovieDetailBlock className={clazzName} onClick={onClick} >
                 <div className="movie_detail">
                     <div className="detail_left">
                         <div className="left_wrap movie_detail_title">
-                            <h1>영화제목</h1>
+                            <h1>{title}</h1>
                         </div>
                         <div className="left_wrap movie_detail_info">
                             <p>정보</p>
@@ -130,7 +130,7 @@ const MovieDetail = ({clazzName, show, onClick}) => {
                         </div>
                     </div>
                     <div className="detail_right">
-                        <span>이미지</span>
+                        <img className="movie_back_img"  alt={title}/>
                     </div>
                 </div>
             </MovieDetailBlock>
