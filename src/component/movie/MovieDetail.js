@@ -3,36 +3,39 @@ import styled from 'styled-components';
 
 
 const MovieDetailBlock = styled.div`
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
     background: #0B0C0D;
-    height: 0;
-    padding-left: 4%;
+    padding: 3%;
     border-top: 1px solid #191a1c;
     border-bottom: 1px solid #191a1c;
     opacity: 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     &.show {
-        height: 25vw;
+       
         opacity: 1;
     }
     .movie_detail {
-        position: relative;
-        height: 100%;
-        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        width: 100vw;
+        height: 70vh;
+        padding: 4vw;
+        overflow: hidden;
+        background: #2c2c2c;
         color: #fff;
-        &:after {
-            display: block;
-            content: '';
-            clear: both;
-        }
     }
-    .detail_left {
-        float: left;
-        width: 40%;
+    .detail_content {
+        // float: left;
+        // width: 40%;
         height: 100%
         padding-top: 5vw;
-        & > .left_wrap {
+        & > .content_wrap {
             margin-bottom: 10px;
         }
         .movie_detail_title {
@@ -101,19 +104,26 @@ const MovieDetailBlock = styled.div`
     }
 `;
  
-const MovieDetail = ({clazzName, show, onClick, title, backImg}) => {
+const MovieDetail = ({clazzName, show, onClick, title, overview, backImg}) => {
+    const styles ={
+        backgroundImage: `url(https://image.tmdb.org/t/p/original${backImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '50% 60%',
+        opacity: '0.7',
+    }
     return(
         show ?
-            <MovieDetailBlock className={clazzName} onClick={onClick} >
-                <div className="movie_detail">
-                    <div className="detail_left">
-                        <div className="left_wrap movie_detail_title">
+            <MovieDetailBlock className={clazzName} onClick={onClick}  >
+                <div className="movie_detail" style={styles}>
+                    <div className="detail_content">
+                        <div className="content_wrap movie_detail_title">
                             <h1>{title}</h1>
                         </div>
-                        <div className="left_wrap movie_detail_info">
-                            <p>정보</p>
+                        <div className="content_wrap movie_detail_info">
+                            <p>{overview}</p>
                         </div>
-                        <ul className="left_wrap movie_detail_cast">
+                        <ul className="content_wrap movie_detail_cast">
                             <li>
                                 <span className="cast_txt">감독</span>
                                 <span className="cast_desc">감독</span>
@@ -128,9 +138,6 @@ const MovieDetail = ({clazzName, show, onClick, title, backImg}) => {
                                 <span>재생</span>
                             </button>
                         </div>
-                    </div>
-                    <div className="detail_right">
-                        <img className="movie_back_img"  alt={title}/>
                     </div>
                 </div>
             </MovieDetailBlock>

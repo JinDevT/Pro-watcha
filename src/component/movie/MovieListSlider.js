@@ -160,7 +160,7 @@ const MovieListLi = styled.li`
 
 
 
-const MovieListSlider = ({title, overview, poster, backImg}) => {
+const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
   
     const [ detail, setDetail ] = useState(false);
     const showDetail = () => {setDetail(true);}
@@ -177,13 +177,13 @@ const MovieListSlider = ({title, overview, poster, backImg}) => {
                                 </div>
                             </div>
                             <div className="movie_item_2">
-                                <p className="movie_title">{title}</p>
+                                <p className="movie_title">제목: {title}</p>
                             </div>
                             <div className="movie_item_3">
-                                <p className="movie_desc">영회시간</p>
+                                <p className="movie_desc">출시일: {date}</p>
                             </div>
                             <div className="movie_item_4">
-                                <p className="movie_info">{overview}</p>
+                                <p className="movie_info">평점: {average}</p>
                             </div>
                             <div className="movie_item_5" onClick={() => showDetail()}>
                                 <i className="icon_detail"/>
@@ -198,6 +198,7 @@ const MovieListSlider = ({title, overview, poster, backImg}) => {
                     clazzName={"movieContainer " + (detail ? "show" : "hide")}
                     show={detail}
                     title={title}
+                    overview={overview}
                     backImg={backImg}
                     onClick={() => closeDetail()}
                 />

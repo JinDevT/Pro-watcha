@@ -49,7 +49,6 @@ const MovieList = ({children}) => {
                 <ul className="movie_ul">
                     {children}
                 </ul>
-                
             </MovieListBox>
         </MoviSliderBlock>
     );

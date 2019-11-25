@@ -14,6 +14,7 @@ const ActionMovieContainer = (props) => {
     }, []);
 
     const actionData = useSelector(state => state.action.movies,[]) || [];
+    console.log(actionData);
     return (
         <>
             <h3>Action</h3>
@@ -21,10 +22,12 @@ const ActionMovieContainer = (props) => {
                 { actionData.results && actionData.results.map(movie => ( 
                     <MovieListSlider 
                         key={movie.id}
-                        title={movie.title}
-                        overview={movie.overview}
-                        poster={movie.poster_path}
-                        backImg={movie.backdrop_path}
+                        title={movie.title} //타이틀
+                        average={movie.vote_average} // 평점
+                        overview={movie.overview} //정보
+                        poster={movie.poster_path} //포스터
+                        date={movie.release_date} //출시일
+                        backImg={movie.backdrop_path} //배경화면
                     /> 
                 ))}
             
