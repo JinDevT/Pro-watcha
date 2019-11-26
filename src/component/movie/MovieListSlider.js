@@ -29,7 +29,7 @@ const MovieListLi = styled.li`
         &:hover {
             width: 22vw;
             height: 15vw;
-            transition: 0.5s;
+            transition: 0.4s;
             opacity: 1;
             transition-delay: 0.3s;
             .movie_item {

@@ -1,25 +1,24 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAction } from '../../modules/movie';
+import { fetchRomance } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-
-const ActionMovieContainer = (props) => {
+const RomanceMovieContainer = (props) => {
     const dispatch = useDispatch();
     
     useEffect(() => {
         console.log('------useEffect()----');
-        dispatch(fetchAction());
+        dispatch(fetchRomance());
     }, []);
 
-    const actionData = useSelector(state => state.action.movies,[]) || [];
-  
+    const romanceData = useSelector(state => state.romance.movies,[]) || [];
+    console.log(romanceData);
     return (
         <>
-            <h3>Action Movie</h3>
+            <h3>Romance Movie</h3>
             <MovieList>
-                { actionData.results && actionData.results.map(movie => ( 
+                { romanceData.results && romanceData.results.map(movie => ( 
                     <MovieListSlider 
                         key={movie.id}
                         title={movie.title} //타이틀
@@ -30,10 +29,11 @@ const ActionMovieContainer = (props) => {
                         backImg={movie.backdrop_path} //배경화면
                     /> 
                 ))}
-            
+        
             </MovieList>
         </>
+        
     )
 }
 
-export default ActionMovieContainer;
+export default RomanceMovieContainer;

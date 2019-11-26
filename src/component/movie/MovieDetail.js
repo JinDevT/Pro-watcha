@@ -10,7 +10,6 @@ const MovieDetailBlock = styled.div`
     height: 100vh;
     z-index: 101;
     background: #0B0C0D;
-    padding: 3%;
     border-top: 1px solid #191a1c;
     border-bottom: 1px solid #191a1c;
     opacity: 0;
@@ -48,6 +47,9 @@ const MovieDetailBlock = styled.div`
             font-size: 18px;
             p {
                 line-height: 1.2;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
         .movie_detail_cast {

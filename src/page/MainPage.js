@@ -4,6 +4,8 @@ import MainSlider from '../component/main/MainSlider';
 import MovieLayout from '../component/movie/MovieLayout';
 import ActionMovieContainer from '../containers/movie/AcationMovieContainer';
 import ComedyMovieContainer from '../containers/movie/ComedyMovieContainer';
+import RomanceMovieContainer from '../containers/movie/RomanceMovieContainer';
+import AnimationMovieContainer from '../containers/movie/AnimationMovieContainer';
 
 
 const MainPage = () => {
@@ -13,6 +15,8 @@ const MainPage = () => {
             <MovieLayout>
                 <ActionMovieContainer />
                 <ComedyMovieContainer />
+                <RomanceMovieContainer />
+                <AnimationMovieContainer />
             </MovieLayout>
             
                 

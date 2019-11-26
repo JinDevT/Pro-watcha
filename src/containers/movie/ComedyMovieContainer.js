@@ -15,14 +15,17 @@ const ComedyMovieContainer = (props) => {
     const comedyData = useSelector(state => state.comedy.movies,[]) || [];
     return (
         <>
-            <h3>Comedy</h3>
+            <h3>Comedy Movie</h3>
             <MovieList>
                 { comedyData.results && comedyData.results.map(movie => ( 
                     <MovieListSlider 
                         key={movie.id}
-                        title={movie.title}
-                        poster={movie.poster_path}
-                        
+                        title={movie.title} //타이틀
+                        average={movie.vote_average} // 평점
+                        overview={movie.overview} //정보
+                        poster={movie.poster_path} //포스터
+                        date={movie.release_date} //출시일
+                        backImg={movie.backdrop_path} //배경화면
                     /> 
                 ))}
         
