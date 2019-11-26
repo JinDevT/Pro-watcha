@@ -94,7 +94,7 @@ const Start = () => {
                     <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
                     <div className="line_div"></div>
                     <p className="sub_tit watcha_info">왓챠플레이와 왓챠는 같은 계정을 사용해요.</p>
-                    <Link to ="/Sign_in" className="page_btn sign_in">
+                    <Link to ="/main" className="page_btn sign_in">
                         <span>왓챠로 로그인</span>
                     </Link>
                     <br/>

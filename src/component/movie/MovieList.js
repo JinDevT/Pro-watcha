@@ -14,33 +14,26 @@ const MovieListBox = styled.div`
     .movie_ul {
         display: flex;
         align-items: center;
-        // overflow-y: hidden;
-       
         width: 100%;
         white-space: nowrap;
         transition: all 0.5s;
         padding: 15px 0;
         overflow-y: hidden;
         &::-webkit-scrollbar {
-            background: none;
-            border: 1px solid #303030;
+            height: 1vh;
         }
         &::-webkit-scrollbar-thumb {
-            background: #555;
+            background: #495057;
             border-radius: 30px;
         }
 
         .movie_ul > li {
-       
             padding: 0 2px;
             transition: all .2s ease-in;
             cursor: pointer;
         }
     }
 `;
-
-
-
 
 const MovieList = ({children}) => {
     return(

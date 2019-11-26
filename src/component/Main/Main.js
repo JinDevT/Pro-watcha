@@ -11,14 +11,14 @@ const MainBlock = styled.div`
 `;
 
 const MainBox =  styled.main`
-    background-color: #000;
+    background-color: #141517;
 `;
 
 const Main =({children}) => {
     return(
         <MainBlock>
             <Header/>
-            <Nav main type='main' />
+            <Nav main type='main' className="scrolling"/>
             <MainBox>
                 {children}
             </MainBox>

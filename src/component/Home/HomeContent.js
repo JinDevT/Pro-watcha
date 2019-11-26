@@ -22,7 +22,7 @@ class HomeContent extends Component {
                     subTitle:'6만 편의 작품을 언제 어디서나 감상',
                     btnTitle:'무료체험 시작',
                     content:'Cont2',
-                    backgroundImg:"https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1544687596/si4teaaw4ozu3fhpvvfa.jpg"
+                    backgroundImg:"https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1547178294/lbyyruw3z859wq9asnof.jpg"
                 },
                 {
                     title:'최고의 화질',

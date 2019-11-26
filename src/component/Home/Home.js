@@ -25,7 +25,8 @@ const Cont = styled.div`
     }
     .big_tit {
         margin-top: 70px;
-        font-size: 60px;
+        font-size: 55px;
+        font-weight: 400;
         letter-spacing: 0.3px;
         line-height: 1;
         color: #fff

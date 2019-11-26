@@ -1,11 +1,13 @@
 import axios from 'axios';
 
-// 액션함수
+// Action function
 export const FETCH_ACTION = 'movie/FETCH_ACTION';
 export const FETCH_COMEDE = 'movie/FETCH_COMEDE';
 export const FETCH_ROMANCE = 'movie/FETCH_ROMANCE';
-export const FETCH_ANIMATION = 'movie/FETCH_ANIMATION'
+export const FETCH_ANIMATION = 'movie/FETCH_ANIMATION';
+export const FETCH_HORROR = 'movie/FETCH_HORROR';
 
+// Api infomation
 const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
 const API_URL = `https://api.themoviedb.org/3`;
 
@@ -30,7 +32,7 @@ export const fetchAction = () => {
             throw(error);
         })
     }
-}
+};
 
 // Comedy
 export const fetchComedyData = (data) => {
@@ -38,7 +40,7 @@ export const fetchComedyData = (data) => {
         type: FETCH_COMEDE,
         data
     }
-}
+};
 
 export const fetchComedy = () => {
     return (dispatch) => {
@@ -50,7 +52,7 @@ export const fetchComedy = () => {
             throw(error);
         })
     }
-}
+};
 
 // Romance
 export const fetchRomanceData = (data) => {
@@ -58,7 +60,7 @@ export const fetchRomanceData = (data) => {
         type: FETCH_ROMANCE,
         data
     }
-}
+};
 
 export const fetchRomance = () => {
     return (dispatch) => {
@@ -70,7 +72,7 @@ export const fetchRomance = () => {
             throw(error);
         })
     }
-}
+};
 
 // Animation
 export const fetchAnimationData = (data) => {
@@ -78,13 +80,34 @@ export const fetchAnimationData = (data) => {
         type: FETCH_ANIMATION,
         data
     }
-}
+};
 
 export const fetchAnimation = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`)
         .then(response => {
             dispatch(fetchAnimationData(response.data))
+        })
+        .catch(error => {
+            throw(error);
+        })
+    }
+};
+
+// Horror
+
+export const fetchHorrorData = (data) => {
+    return {
+        type: FETCH_HORROR,
+        data
+    }
+};
+
+export const fetchHorror = () => {
+    return (dispatch) => {
+        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=27`)
+        .then(response => {
+            dispatch(fetchHorrorData(response.data))
         })
         .catch(error => {
             throw(error);

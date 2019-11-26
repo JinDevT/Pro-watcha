@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import Logo from '../../assets/images/logo.png';
@@ -10,12 +10,14 @@ const NavBlock = styled.nav`
     width: 100%;
     height: 70px;
     padding: 0 50px;
+    transition: all .5s ease-in;
     ${props =>
         props.main &&
         css`
             top: 56px;
-            background-color: black;
-            opacity: 0.7;
+            &.backColor {
+                background-color: #111;
+            }
         `}
     
     &:after {
@@ -67,8 +69,22 @@ const ListLi =  styled.li`
 `;
 
 const Nav = props => {
+    const [scroll, setScroll] = useState(false);
+
+    const MainScroll = () => {
+        if(window.scrollY === 0) {
+            console.log(window.scrollY);
+            setScroll(false);
+        } else if (window.scrollY > 20) {
+            console.log(window.scrollY);
+            setScroll(true);
+        }
+    }
+
+    window.addEventListener('scroll', MainScroll);
+
     return (
-        <NavBlock {...props} >
+        <NavBlock {...props} className={"navigation " + (scroll ? "backColor" : "" )}>
             <LeftNav>
                 <Link to='/' className="logo" ></Link>
             </LeftNav>

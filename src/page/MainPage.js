@@ -6,6 +6,7 @@ import ActionMovieContainer from '../containers/movie/AcationMovieContainer';
 import ComedyMovieContainer from '../containers/movie/ComedyMovieContainer';
 import RomanceMovieContainer from '../containers/movie/RomanceMovieContainer';
 import AnimationMovieContainer from '../containers/movie/AnimationMovieContainer';
+import HorrorMovieContainer from '../containers/movie/HorrorMovieContainer';
 
 
 const MainPage = () => {
@@ -17,6 +18,7 @@ const MainPage = () => {
                 <ComedyMovieContainer />
                 <RomanceMovieContainer />
                 <AnimationMovieContainer />
+                <HorrorMovieContainer />
             </MovieLayout>
             
                 

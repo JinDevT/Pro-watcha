@@ -17,7 +17,7 @@ const App = () =>  {
         <Route path='/' component={HomePage} exact={true} />
         <Route path='/start' component={StartPage} />
         <Route path='/sign_up' component={SignUpPage}/>
-        <Route path='/sign_in' component={MainPage}/>  {/* 임시로 페이지 확인할려고 이렇게 지정함 . 원래는 SignInpage */}
+        {/* <Route path='/sign_in' component={MainPage}/>  임시로 페이지 확인할려고 이렇게 지정함 . 원래는 SignInpage */}
         <Route path='/main' component={MainPage} />
       </>
     )

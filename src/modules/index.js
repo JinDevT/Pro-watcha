@@ -3,6 +3,7 @@ import actionReducer from './actionReducer';
 import comedyReducer from './comedyReducer';
 import romanceReducer from './romanceReducer';
 import animationReducer from './animationReducer';
+import horrorReducer from './horrorReducer';
 
 // import { all } from 'redux-saga/effects';
 // import auth, { authSaga } from './auth';
@@ -21,7 +22,9 @@ const rootReducer = combineReducers({
     action: actionReducer,
     comedy: comedyReducer,
     romance: romanceReducer,
-    animation: animationReducer
+    animation: animationReducer,
+    horror: horrorReducer
+
     
 })
 
