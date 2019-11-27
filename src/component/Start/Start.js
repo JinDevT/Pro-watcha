@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import styled from 'styled-components';
 // import img from '../../assets/images/start_bg.jpeg';
 import logoImg from '../../assets/images/logo.png';
+import Button from '../common/Button';
 
 const StartTemplate = styled.div`
     position: relative;
@@ -65,7 +68,7 @@ const StartTemplate = styled.div`
     .line_div {
         width: 260px;
         height: 1px;
-        background-color: rgba(154,151,161,0.3);
+        background-color: #e9ecef;
         margin: 0 auto 20px;
     }
     .sub_tit.watcha_info {
@@ -77,7 +80,8 @@ const StartTemplate = styled.div`
     
 `;
 
-const Start = () => {
+const Start = (response) => {
+    console.log(response);
     return(
         <StartTemplate>
             <div className="inner">
@@ -88,9 +92,19 @@ const Start = () => {
                         <span>왓챠에 가입</span>
                     </Link> */}
                     <br/>
-                    <Link to="/" className="page_btn face_join">
+                    {/* <Link to="/" className="page_btn face_join">
                         <span>Facebook으로 가입</span>
-                    </Link>
+                    </Link> */}
+                    <FacebookLogin className="pagr"
+                        appId="1088597931155576"
+                        autoLoad={true}
+                        fields="name,email,picture"
+                        callback={Start} 
+                        icon="fa-facebook"
+                        render={renderProps => (
+                            <Button facebook onClick={renderProps.onClick}>facebook으로 가입</Button>
+                          )}
+                        />
                     <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
                     <div className="line_div"></div>
                     <p className="sub_tit watcha_info">무료체험을 시작해보세요.</p>

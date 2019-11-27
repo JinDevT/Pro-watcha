@@ -2,8 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const StyleButton = styled.button`
-    width: 100%;
-    height: 50px;
+    width: 290px;
+    height: 52px;
     margin-bottom: 20px;
     border: none;
     border-radius: 50px;

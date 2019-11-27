@@ -94,7 +94,7 @@ const Nav = props => {
                 */}
                 <NavList>
                     <ListLi>
-                        <Link to='/start' className="btn start_btn">시작하기</Link>
+                        {/* <Link to='/start' className="btn start_btn">시작하기</Link> */}
                     </ListLi>
                 </NavList>
             </RightNav>
