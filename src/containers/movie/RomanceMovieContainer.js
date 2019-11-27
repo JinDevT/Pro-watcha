@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchRomance } from '../../modules/movie';
+import { getRomance } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
@@ -9,8 +9,8 @@ const RomanceMovieContainer = (props) => {
     
     useEffect(() => {
         console.log('------useEffect()----');
-        dispatch(fetchRomance());
-    }, []);
+        dispatch(getRomance());
+    }, [dispatch]);
 
     const romanceData = useSelector(state => state.romance.movies,[]) || [];
     console.log(romanceData);

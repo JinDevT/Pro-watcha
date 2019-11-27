@@ -1,8 +1,8 @@
-import { FETCH_ACTION } from './movie';
+import { GET_ACTION } from './movie';
 
 export default function(state = [], action) {
     switch (action.type) {
-        case FETCH_ACTION:
+        case GET_ACTION:
             return {
                 ...state,
                 movies: action.data

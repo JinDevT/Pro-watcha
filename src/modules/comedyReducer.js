@@ -1,8 +1,8 @@
-import { FETCH_COMEDE } from './movie';
+import { GET_COMEDE } from './movie';
 
 export default function(state = [], action) {
     switch (action.type) {
-        case FETCH_COMEDE:
+        case GET_COMEDE:
             return {
                 ...state,
                 movies: action.data

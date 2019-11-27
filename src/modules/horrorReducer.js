@@ -1,8 +1,8 @@
-import { FETCH_HORROR } from './movie';
+import { GET_HORROR } from './movie';
 
 export default function(state = [], action) {
     switch (action.type) {
-        case FETCH_HORROR:
+        case GET_HORROR:
             return {
                 ...state,
                 movies: action.data

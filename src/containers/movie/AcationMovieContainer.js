@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchAction } from '../../modules/movie';
+import { getAction } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
@@ -10,8 +10,8 @@ const ActionMovieContainer = (props) => {
     
     useEffect(() => {
         console.log('------useEffect()----');
-        dispatch(fetchAction());
-    }, []);
+        dispatch(getAction());
+    }, [dispatch]);
 
     const actionData = useSelector(state => state.action.movies,[]) || [];
   

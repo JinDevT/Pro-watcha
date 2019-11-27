@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchHorror } from '../../modules/movie';
+import { getHorror } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
@@ -9,8 +9,8 @@ const HorrorMovieContainer = (props) => {
     
     useEffect(() => {
         console.log('------useEffect()----');
-        dispatch(fetchHorror());
-    }, []);
+        dispatch(getHorror());
+    }, [dispatch]);
 
     const horrorData = useSelector(state => state.horror.movies,[]) || [];
     console.log(horrorData);

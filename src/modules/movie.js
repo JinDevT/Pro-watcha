@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 // Action function
-export const FETCH_ACTION = 'movie/FETCH_ACTION';
-export const FETCH_COMEDE = 'movie/FETCH_COMEDE';
-export const FETCH_ROMANCE = 'movie/FETCH_ROMANCE';
-export const FETCH_ANIMATION = 'movie/FETCH_ANIMATION';
-export const FETCH_HORROR = 'movie/FETCH_HORROR';
+export const GET_ACTION = 'movie/GET_ACTION';
+export const GET_COMEDE = 'movie/GET_COMEDE';
+export const GET_ROMANCE = 'movie/GET_ROMANCE';
+export const GET_ANIMATION = 'movie/GET_ANIMATION';
+export const GET_HORROR = 'movie/GET_HORROR';
 
 // Api infomation
 const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
@@ -14,18 +14,18 @@ const API_URL = `https://api.themoviedb.org/3`;
 
 
 // Action.
-export const fetchActionData = (data) => {
+export const getActionData = (data) => {
     return {
-        type: FETCH_ACTION,
+        type: GET_ACTION,
         data
     }
 };
 
-export const fetchAction = () => {
+export const getAction = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`)
         .then(response => {
-            dispatch(fetchActionData(response.data))
+            dispatch(getActionData(response.data))
         })
         .catch(error => {
             console.log('error');
@@ -35,18 +35,18 @@ export const fetchAction = () => {
 };
 
 // Comedy
-export const fetchComedyData = (data) => {
+export const getComedyData = (data) => {
     return {
-        type: FETCH_COMEDE,
+        type: GET_COMEDE,
         data
     }
 };
 
-export const fetchComedy = () => {
+export const getComedy = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35`)
         .then(response => {
-            dispatch(fetchComedyData(response.data))
+            dispatch(getComedyData(response.data))
         })
         .catch(error => {
             throw(error);
@@ -55,18 +55,18 @@ export const fetchComedy = () => {
 };
 
 // Romance
-export const fetchRomanceData = (data) => {
+export const getRomanceData = (data) => {
     return {
-        type: FETCH_ROMANCE,
+        type: GET_ROMANCE,
         data
     }
 };
 
-export const fetchRomance = () => {
+export const getRomance = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=10749`)
         .then(response => {
-            dispatch(fetchRomanceData(response.data))
+            dispatch(getRomanceData(response.data))
         })
         .catch(error => {
             throw(error);
@@ -75,18 +75,18 @@ export const fetchRomance = () => {
 };
 
 // Animation
-export const fetchAnimationData = (data) => {
+export const getAnimationData = (data) => {
     return {
-        type: FETCH_ANIMATION,
+        type: GET_ANIMATION,
         data
     }
 };
 
-export const fetchAnimation = () => {
+export const getAnimation = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`)
         .then(response => {
-            dispatch(fetchAnimationData(response.data))
+            dispatch(getAnimationData(response.data))
         })
         .catch(error => {
             throw(error);
@@ -96,18 +96,18 @@ export const fetchAnimation = () => {
 
 // Horror
 
-export const fetchHorrorData = (data) => {
+export const getHorrorData = (data) => {
     return {
-        type: FETCH_HORROR,
+        type: GET_HORROR,
         data
     }
 };
 
-export const fetchHorror = () => {
+export const getHorror = () => {
     return (dispatch) => {
         return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=27`)
         .then(response => {
-            dispatch(fetchHorrorData(response.data))
+            dispatch(getHorrorData(response.data))
         })
         .catch(error => {
             throw(error);

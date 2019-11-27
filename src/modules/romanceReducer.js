@@ -1,10 +1,10 @@
-import { FETCH_ROMANCE } from './movie';
+import { GET_ROMANCE } from './movie';
 
 
 
 export default function(state = [], action) {
     switch (action.type) {
-        case FETCH_ROMANCE:
+        case GET_ROMANCE:
             return {
                 ...state,
                 movies: action.data
