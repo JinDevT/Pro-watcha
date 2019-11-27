@@ -148,7 +148,6 @@ const MovieListLi = styled.li`
                     -o-transform:rotate(-45deg);
                     -ms-transform:rotate(-45deg); 
                 }
-               
             }
     }
     .movie_tit {
@@ -157,7 +156,6 @@ const MovieListLi = styled.li`
         color: #fff;
     }
 `;
-
 
 
 const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
@@ -173,7 +171,7 @@ const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
                         <div className="movie_item">
                             <div className="movie_item_1">
                                 <div className="movie_play">
-                                    <Link to='/' className="icon_play"/>
+                                    <Link to='/movie_play' className="icon_play"/>
                                 </div>
                             </div>
                             <div className="movie_item_2">

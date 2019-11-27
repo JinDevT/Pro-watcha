@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MoviListBlock = styled.div`
+const MovieLayoutBlock = styled.div`
     position: relative;
     z-index: 100;
     margin-top: -65px;
@@ -17,11 +17,11 @@ const MoviListBlock = styled.div`
 
 const MovieLayout = ({children}) => {
     return(
-        <MoviListBlock>
+        <MovieLayoutBlock>
             <div className="movie_wrap">
                {children}
             </div>
-        </MoviListBlock>
+        </MovieLayoutBlock>
     );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import img from '../../assets/images/start_bg.jpeg';
-import LogoImg from '../../assets/images/logo.png';
+// import img from '../../assets/images/start_bg.jpeg';
+import logoImg from '../../assets/images/logo.png';
 
 const StartTemplate = styled.div`
     position: relative;
-    background: url(${img}) no-repeat center;
+    background: url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1564363966/crosgmb6yawejwkff87a.jpg') no-repeat center;
     background-size: cover;
     position: relative;
     .inner {
@@ -30,7 +30,7 @@ const StartTemplate = styled.div`
         display: inline-block;
         width: 345px;
         height: 125px;
-        background: url(${LogoImg}) no-repeat ;
+        background: url(${logoImg}) no-repeat ;
         text-indent: -9999px;
     }
     .page_btn {
@@ -56,11 +56,11 @@ const StartTemplate = styled.div`
     .sub_tit {
         margin: 10px 0;
         line-height: 1.3;
-        color: #BDBDBD;
+        color: #e9ecef;
     }
 
     .sub_tit.face_info {
-        font-size: 13px;
+        font-size: 15px;
     }
     .line_div {
         width: 260px;
@@ -69,7 +69,7 @@ const StartTemplate = styled.div`
         margin: 0 auto 20px;
     }
     .sub_tit.watcha_info {
-        font-size: 15px;
+        font-size: 17px;
     }
     .page_btn.sign_in {
         background: #ff3376;
@@ -84,18 +84,18 @@ const Start = () => {
                 <div className="area_text">
                     <Link to="/" className="logo">로고</Link>
                     <br/>
-                    <Link to="/Sign_up" className="page_btn sign_up">
+                    {/* <Link to="/Sign_up" className="page_btn sign_up">
                         <span>왓챠에 가입</span>
-                    </Link>
+                    </Link> */}
                     <br/>
                     <Link to="/" className="page_btn face_join">
                         <span>Facebook으로 가입</span>
                     </Link>
                     <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
                     <div className="line_div"></div>
-                    <p className="sub_tit watcha_info">왓챠플레이와 왓챠는 같은 계정을 사용해요.</p>
+                    <p className="sub_tit watcha_info">무료체험을 시작해보세요.</p>
                     <Link to ="/main" className="page_btn sign_in">
-                        <span>왓챠로 로그인</span>
+                        <span>무료체험 시작</span>
                     </Link>
                     <br/>
                 </div>

@@ -4,7 +4,8 @@ import { getComedy } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-const ComedyMovieContainer = (props) => {
+const ComedyMovieContainer = () => {
+    const comedyData = useSelector(state => state.comedy.movies,[]) || [];
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -12,7 +13,6 @@ const ComedyMovieContainer = (props) => {
         dispatch(getComedy());
     }, [dispatch]);
 
-    const comedyData = useSelector(state => state.comedy.movies,[]) || [];
     return (
         <>
             <h3>Comedy Movie</h3>

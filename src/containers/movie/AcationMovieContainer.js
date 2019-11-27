@@ -4,17 +4,14 @@ import { getAction } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-
-const ActionMovieContainer = (props) => {
+const ActionMovieContainer = () => {
+    const actionData = useSelector(state => state.action.movies,[]) || [];
     const dispatch = useDispatch();
     
     useEffect(() => {
         console.log('------useEffect()----');
         dispatch(getAction());
     }, [dispatch]);
-
-    const actionData = useSelector(state => state.action.movies,[]) || [];
-  
     return (
         <>
             <h3>Action Movie</h3>

@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-
-
-
-const MoviSliderBlock = styled.div`
+const MovieSliderBlock = styled.div`
     height: 100%;
 `;
 
@@ -37,13 +33,13 @@ const MovieListBox = styled.div`
 
 const MovieList = ({children}) => {
     return(
-        <MoviSliderBlock>
+        <MovieSliderBlock>
             <MovieListBox>
                 <ul className="movie_ul">
                     {children}
                 </ul>
             </MovieListBox>
-        </MoviSliderBlock>
+        </MovieSliderBlock>
     );
 };
 

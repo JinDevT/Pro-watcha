@@ -4,16 +4,15 @@ import { getAnimation } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-const AnimationMovieContainer = (props) => {
+const AnimationMovieContainer = () => {
+    const animationData = useSelector(state => state.animation.movies,[]) || [];
     const dispatch = useDispatch();
     
     useEffect(() => {
         console.log('------useEffect()----');
         dispatch(getAnimation());
     }, [dispatch]);
-
-    const animationData = useSelector(state => state.animation.movies,[]) || [];
-    console.log(animationData);
+    
     return (
         <>
             <h3>Animation Movie</h3>

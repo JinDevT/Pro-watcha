@@ -31,7 +31,7 @@ const NavBlock = styled.nav`
 const LeftNav = styled.div`
     float: left;
     background: url(${Logo}) no-repeat;
-    width: 345px;
+    width: 180px;
     height: 100%;
     background-size: contain;
     text-indent: -9999px;
@@ -73,10 +73,8 @@ const Nav = props => {
 
     const MainScroll = () => {
         if(window.scrollY === 0) {
-            console.log(window.scrollY);
             setScroll(false);
         } else if (window.scrollY > 20) {
-            console.log(window.scrollY);
             setScroll(true);
         }
     }

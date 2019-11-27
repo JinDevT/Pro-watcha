@@ -4,7 +4,8 @@ import { getHorror } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-const HorrorMovieContainer = (props) => {
+const HorrorMovieContainer = () => {
+    const horrorData = useSelector(state => state.horror.movies,[]) || [];
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -12,8 +13,6 @@ const HorrorMovieContainer = (props) => {
         dispatch(getHorror());
     }, [dispatch]);
 
-    const horrorData = useSelector(state => state.horror.movies,[]) || [];
-    console.log(horrorData);
     return (
         <>
             <h3>Horror Movie</h3>

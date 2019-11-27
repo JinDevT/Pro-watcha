@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -69,6 +70,7 @@ const MovieDetailBlock = styled.div`
         }
         .movie_detail_icon {
             position: relative;
+            display: flex;
             .icon_play {
                 background-color: rgb(252, 66, 106);
                 color: rgb(255, 255, 255);
@@ -128,17 +130,17 @@ const MovieDetail = ({clazzName, show, onClick, title, overview, backImg}) => {
                         <ul className="content_wrap movie_detail_cast">
                             <li>
                                 <span className="cast_txt">감독</span>
-                                <span className="cast_desc">감독</span>
+                                <span className="cast_desc">jintae Kim</span>
                             </li>
                             <li>
                                 <span className="cast_txt">출연진</span>
-                                <span className="cast_desc">김진태</span>
+                                <span className="cast_desc">jintae Kim</span>
                             </li>
                         </ul>
                         <div className="left_wrap movie_detail_icon">
-                            <button className="icon_play">
+                            <Link to="/movie_play" className="icon_play">
                                 <span>재생</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

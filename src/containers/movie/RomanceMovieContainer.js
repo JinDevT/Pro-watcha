@@ -4,7 +4,8 @@ import { getRomance } from '../../modules/movie';
 import MovieListSlider from '../../component/movie/MovieListSlider';
 import MovieList from '../../component/movie/MovieList';
 
-const RomanceMovieContainer = (props) => {
+const RomanceMovieContainer = () => {
+    const romanceData = useSelector(state => state.romance.movies,[]) || [];
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -12,8 +13,6 @@ const RomanceMovieContainer = (props) => {
         dispatch(getRomance());
     }, [dispatch]);
 
-    const romanceData = useSelector(state => state.romance.movies,[]) || [];
-    console.log(romanceData);
     return (
         <>
             <h3>Romance Movie</h3>
