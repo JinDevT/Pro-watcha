@@ -151,8 +151,12 @@ const MovieListLi = styled.li`
             }
     }
     .movie_tit {
+        width: 15vw;
         margin-top: 5px;
         font-size: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         color: #fff;
     }
 `;

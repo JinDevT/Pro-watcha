@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import KakoLogin from 'react-kakao-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import styled from 'styled-components';
 // import img from '../../assets/images/start_bg.jpeg';
@@ -80,6 +80,60 @@ const StartTemplate = styled.div`
     
 `;
 
+// class Start extends Component{
+//     constructor(props) {
+//         super(props);
+//         this.state ={
+//             id: '',
+//             name: '',
+//             provider: '',
+
+//         }
+//     }
+
+//     responseKako = (res) => {
+//         this.state({
+//             id: res.profile.id,
+//             name: res.profile.properties.nickname,
+//             provider: 'kako'
+//         })
+//     }
+
+//     responseError = (err) => {
+//         console.log(err);
+//     }
+//     render() {
+//         return(
+//             <StartTemplate>
+//                 <div className="inner">
+//                     <div className="area_text">
+//                         <Link to="/" className="logo">로고</Link>
+//                         <br/>
+//                         <Link to="/Sign_up" className="page_btn sign_up">
+//                                 <span>왓챠에 가입</span>
+//                         </Link> 
+//                         <br/>
+//                         <KakoLogin
+//                             jsKey="f51949cb49f446fd6ea06b90275968c5"
+//                             buttonText="kakao"
+//                             onSuccess={this.responseKako}
+//                             onFailure={this.responseError}
+//                             getProfile="true"
+//                         />
+//                         <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
+//                         <div className="line_div"></div>
+//                         <p className="sub_tit watcha_info">무료체험을 시작해보세요.</p>
+//                             <Link to ="/main" className="page_btn sign_in">
+//                             <span>무료체험 시작</span>
+//                             </Link>
+//                         <br/>
+//                     </div>
+//                 </div>
+//             </StartTemplate>  
+//         );
+//     }
+// }
+
 const Start = (response) => {
     console.log(response);
     return(
@@ -88,15 +142,12 @@ const Start = (response) => {
                 <div className="area_text">
                     <Link to="/" className="logo">로고</Link>
                     <br/>
-                    {/* <Link to="/Sign_up" className="page_btn sign_up">
+                   {/* <Link to="/Sign_up" className="page_btn sign_up">
                         <span>왓챠에 가입</span>
-                    </Link> */}
+                    </Link>  */}
                     <br/>
-                    {/* <Link to="/" className="page_btn face_join">
-                        <span>Facebook으로 가입</span>
-                    </Link> */}
-                    <FacebookLogin className="pagr"
-                        appId="1088597931155576"
+                    <FacebookLogin
+                        appId="2700101940084009"
                         autoLoad={true}
                         fields="name,email,picture"
                         callback={Start} 
