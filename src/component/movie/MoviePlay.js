@@ -1,7 +1,5 @@
 import React from 'react';
-
 import styled from 'styled-components';
-// import backImg from '../../assets/images/start_bg.jpeg';
 import logoImg from '../../assets/images/logo.png';
 
 const MovieTemplate = styled.div`

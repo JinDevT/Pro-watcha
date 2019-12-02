@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Nav from '../common/Nav';
 import Home from './Home';
+import Footer from '../common/Footer';
 
-
-
+const HomeContentBlock = styled.div`
+    position: relative;
+`;
 
 class HomeContent extends Component {
     constructor(props) {
@@ -46,9 +49,8 @@ class HomeContent extends Component {
 
     render() {
         const { content } = this.state;
-        console.log(content[0].title)
         return (
-            <div>
+            <HomeContentBlock>
                 <Nav/>
                 {
                     content.map((v,i)=>{
@@ -74,8 +76,9 @@ class HomeContent extends Component {
                         )
                     })
                 }
+                <Footer/>
                 
-            </div>
+            </HomeContentBlock>
         );
     }
 }

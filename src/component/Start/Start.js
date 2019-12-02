@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import KakoLogin from 'react-kakao-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import styled from 'styled-components';
-// import img from '../../assets/images/start_bg.jpeg';
 import logoImg from '../../assets/images/logo.png';
 import Button from '../common/Button';
+
 
 const StartTemplate = styled.div`
     position: relative;
@@ -148,7 +148,7 @@ const Start = (response) => {
                     <br/>
                     <FacebookLogin
                         appId="2700101940084009"
-                        autoLoad={true}
+                        autoLoad={false}
                         fields="name,email,picture"
                         callback={Start} 
                         icon="fa-facebook"

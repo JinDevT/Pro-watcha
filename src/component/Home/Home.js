@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 
@@ -56,24 +57,26 @@ const Cont = styled.div`
 `;
 
 const Home = (props) =>{
-    console.log(props.backgroundImg);
     const styles = {
         backgroundImage: `url(${props.backgroundImg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
     }
     return(
-        <Cont Content={props.content} style={styles}>
-            <div className="inner">
-                <div className="area_text">
-                    <h2 className="big_tit" >{props.title}</h2>
-                    <h5 className="small_tit">{props.subTitle}</h5>
-                    <Link to="/start" className="btn free_btn">
-                        {props.btnTitle}
-                    </Link>
+        <>
+            <Cont Content={props.content} style={styles}>
+                <div className="inner">
+                    <div className="area_text">
+                        <h2 className="big_tit" >{props.title}</h2>
+                        <h5 className="small_tit">{props.subTitle}</h5>
+                        <Link to="/start" className="btn free_btn">
+                            {props.btnTitle}
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </Cont>
+            </Cont>
+            
+        </>
     )
 }
 
