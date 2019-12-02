@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from '../../assets/images/start_bg.jpeg';
+
 
 import Nav from '../common/Nav';
 
@@ -9,7 +9,7 @@ import Nav from '../common/Nav';
 const SignTemplateBlock = styled.div`
     position: relative;
     min-height: 900px;
-    background: url(${img}) no-repeat center;
+    background: url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_1620,q_80,w_2880/v1564363966/crosgmb6yawejwkff87a.jpg') no-repeat center;
     background-size: cover;
     position: relative;
 `;
