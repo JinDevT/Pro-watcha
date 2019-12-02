@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import KakoLogin from 'react-kakao-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import styled from 'styled-components';
 import logoImg from '../../assets/images/logo.png';
