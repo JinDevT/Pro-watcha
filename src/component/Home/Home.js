@@ -72,6 +72,7 @@ const Home = (props) =>{
                         <Link to="/start" className="btn free_btn">
                             {props.btnTitle}
                         </Link>
+                        
                     </div>
                 </div>
             </Cont>
