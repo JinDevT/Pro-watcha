@@ -9,7 +9,6 @@ const RomanceMovieContainer = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        console.log('------useEffect()----');
         dispatch(getRomance());
     }, [dispatch]);
 

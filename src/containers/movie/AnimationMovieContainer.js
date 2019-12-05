@@ -9,7 +9,6 @@ const AnimationMovieContainer = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        console.log('------useEffect()----');
         dispatch(getAnimation());
     }, [dispatch]);
     

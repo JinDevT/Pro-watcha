@@ -9,7 +9,6 @@ const ActionMovieContainer = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        console.log('------useEffect()----');
         dispatch(getAction());
     }, [dispatch]);
     return (

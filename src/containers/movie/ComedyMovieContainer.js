@@ -9,7 +9,6 @@ const ComedyMovieContainer = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        console.log('------useEffect()----');
         dispatch(getComedy());
     }, [dispatch]);
 

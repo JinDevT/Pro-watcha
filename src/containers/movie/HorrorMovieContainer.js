@@ -9,7 +9,6 @@ const HorrorMovieContainer = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        console.log('------useEffect()----');
         dispatch(getHorror());
     }, [dispatch]);
 
