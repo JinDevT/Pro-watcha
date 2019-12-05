@@ -21,17 +21,16 @@ export const getActionData = (data) => {
     }
 };
 
-export const getAction = () => {
-    return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`)
-        .then(response => {
-            dispatch(getActionData(response.data))
-        })
-        .catch(error => {
-            console.log('error');
-            throw(error);
-        })
-    }
+export const getAction = () => dispatch => {
+    return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28`)
+    .then(response => {
+        dispatch(getActionData(response.data))
+    })
+    .catch(error => {
+        console.log('error');
+        throw(error);
+    })
+    
 };
 
 // Comedy
@@ -42,16 +41,15 @@ export const getComedyData = (data) => {
     }
 };
 
-export const getComedy = () => {
-    return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35`)
-        .then(response => {
-            dispatch(getComedyData(response.data))
-        })
-        .catch(error => {
-            throw(error);
-        })
-    }
+export const getComedy = () => dispatch => {
+    return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35`)
+    .then(response => {
+        dispatch(getComedyData(response.data))
+    })
+    .catch(error => {
+        throw(error);
+    })
+    
 };
 
 // Romance
@@ -62,16 +60,15 @@ export const getRomanceData = (data) => {
     }
 };
 
-export const getRomance = () => {
-    return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=10749`)
-        .then(response => {
-            dispatch(getRomanceData(response.data))
-        })
-        .catch(error => {
-            throw(error);
-        })
-    }
+export const getRomance = () => dispatch => {
+    return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=10749`)
+    .then(response => {
+        dispatch(getRomanceData(response.data))
+    })
+    .catch(error => {
+        throw(error);
+    })
+    
 };
 
 // Animation
@@ -82,16 +79,15 @@ export const getAnimationData = (data) => {
     }
 };
 
-export const getAnimation = () => {
-    return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`)
-        .then(response => {
-            dispatch(getAnimationData(response.data))
-        })
-        .catch(error => {
-            throw(error);
-        })
-    }
+export const getAnimation = () => dispatch => {
+    return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`)
+    .then(response => {
+        dispatch(getAnimationData(response.data))
+    })
+    .catch(error => {
+        throw(error);
+    })
+    
 };
 
 // Horror
@@ -103,16 +99,14 @@ export const getHorrorData = (data) => {
     }
 };
 
-export const getHorror = () => {
-    return (dispatch) => {
-        return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=27`)
-        .then(response => {
-            dispatch(getHorrorData(response.data))
-        })
-        .catch(error => {
-            throw(error);
-        })
-    }
+export const getHorror = () => dispatch => {
+    return axios.get(`${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=27`)
+    .then(response => {
+        dispatch(getHorrorData(response.data))
+    })
+    .catch(error => {
+        throw(error);
+    })
 }
 
 
