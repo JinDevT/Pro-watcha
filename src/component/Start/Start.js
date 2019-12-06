@@ -79,60 +79,6 @@ const StartTemplate = styled.div`
     
 `;
 
-// class Start extends Component{
-//     constructor(props) {
-//         super(props);
-//         this.state ={
-//             id: '',
-//             name: '',
-//             provider: '',
-
-//         }
-//     }
-
-//     responseKako = (res) => {
-//         this.state({
-//             id: res.profile.id,
-//             name: res.profile.properties.nickname,
-//             provider: 'kako'
-//         })
-//     }
-
-//     responseError = (err) => {
-//         console.log(err);
-//     }
-//     render() {
-//         return(
-//             <StartTemplate>
-//                 <div className="inner">
-//                     <div className="area_text">
-//                         <Link to="/" className="logo">로고</Link>
-//                         <br/>
-//                         <Link to="/Sign_up" className="page_btn sign_up">
-//                                 <span>왓챠에 가입</span>
-//                         </Link> 
-//                         <br/>
-//                         <KakoLogin
-//                             jsKey="f51949cb49f446fd6ea06b90275968c5"
-//                             buttonText="kakao"
-//                             onSuccess={this.responseKako}
-//                             onFailure={this.responseError}
-//                             getProfile="true"
-//                         />
-//                         <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
-//                         <div className="line_div"></div>
-//                         <p className="sub_tit watcha_info">무료체험을 시작해보세요.</p>
-//                             <Link to ="/main" className="page_btn sign_in">
-//                             <span>무료체험 시작</span>
-//                             </Link>
-//                         <br/>
-//                     </div>
-//                 </div>
-//             </StartTemplate>  
-//         );
-//     }
-// }
-
 const Start = (response) => {
     console.log(response);
     return(
