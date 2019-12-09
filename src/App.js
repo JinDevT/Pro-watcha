@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import HomePage from './page/HomePage.js';
 import StartPage from './page/StartPage.js';
+
 import MainPage from './page/MainPage.js';
 import MoviePlay from './component/movie/MoviePlay';
 

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import styled from 'styled-components';
 import logoImg from '../../assets/images/logo.png';
-import Button from '../common/Button';
-
 
 const StartTemplate = styled.div`
     position: relative;
@@ -79,29 +76,13 @@ const StartTemplate = styled.div`
     
 `;
 
-const Start = (response) => {
-    console.log(response);
+const Start = () => {
     return(
         <StartTemplate>
             <div className="inner">
                 <div className="area_text">
                     <Link to="/" className="logo">로고</Link>
                     <br/>
-                   {/* <Link to="/Sign_up" className="page_btn sign_up">
-                        <span>왓챠에 가입</span>
-                    </Link>  */}
-                    <br/>
-                    <FacebookLogin
-                        appId="2700101940084009"
-                        autoLoad={false}
-                        fields="name,email,picture"
-                        callback={Start} 
-                        icon="fa-facebook"
-                        render={renderProps => (
-                            <Button facebook onClick={renderProps.onClick}>facebook으로 가입</Button>
-                          )}
-                        />
-                    <p className="sub_tit face_info">걱정마세요. 타임라인에 아무것도 올리지 않아요.</p>
                     <div className="line_div"></div>
                     <p className="sub_tit watcha_info">무료체험을 시작해보세요.</p>
                     <Link to ="/main" className="page_btn sign_in">
