@@ -21,6 +21,6 @@
 
 
 
-![work_detail_02](https://user-images.githubusercontent.com/39721152/70598650-a6290180-1c2e-11ea-8d01-b24bdd826cb8.jpg | width=100)
+![work_detail_02](https://user-images.githubusercontent.com/39721152/70598650-a6290180-1c2e-11ea-8d01-b24bdd826cb8.jpg)
 
 
