@@ -19,8 +19,18 @@
 ### ㅇ스크린샷
 - 시작페이지
 
-![main_port_01](https://user-images.githubusercontent.com/39721152/70599870-a2e34500-1c31-11ea-83a5-18ee18fb48ed.jpg)
+<img width="1588" alt="시작" src="https://user-images.githubusercontent.com/39721152/70600349-d1adeb00-1c32-11ea-9bc1-ef010a5259ed.png">
 
-![work_detail_02](https://user-images.githubusercontent.com/39721152/70598650-a6290180-1c2e-11ea-8d01-b24bdd826cb8.jpg)
+<img width="1588" alt="시작2" src="https://user-images.githubusercontent.com/39721152/70600392-e5f1e800-1c32-11ea-9727-47a3fd35fb8c.png">
+
+- 메인페이지
+
+<img width="1588" alt="메인" src="https://user-images.githubusercontent.com/39721152/70600427-f99d4e80-1c32-11ea-888d-3958ddfc482e.png">
+
+<img width="1588" alt="메인2" src="https://user-images.githubusercontent.com/39721152/70600444-03bf4d00-1c33-11ea-9840-7b2496c09ef9.png">
+
+- 
+
+<img width="1588" alt="메인-모달" src="https://user-images.githubusercontent.com/39721152/70600450-06ba3d80-1c33-11ea-8f84-30d0c5fa43d3.png">
 
 
