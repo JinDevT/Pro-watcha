@@ -20,5 +20,7 @@
 - 시작페이지
 ![main_port_01](https://user-images.githubusercontent.com/39721152/70598579-7da10780-1c2e-11ea-82c0-e61b7933f3ca.jpg)
 
+![work_detail_02](https://user-images.githubusercontent.com/39721152/70598650-a6290180-1c2e-11ea-8d01-b24bdd826cb8.jpg)
+
 
 
