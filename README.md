@@ -29,7 +29,7 @@
 
 <img width="1588" alt="메인2" src="https://user-images.githubusercontent.com/39721152/70600444-03bf4d00-1c33-11ea-9840-7b2496c09ef9.png">
 
-- 
+- 모달
 
 <img width="1588" alt="메인-모달" src="https://user-images.githubusercontent.com/39721152/70600450-06ba3d80-1c33-11ea-8f84-30d0c5fa43d3.png">
 
