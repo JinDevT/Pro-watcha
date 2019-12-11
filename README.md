@@ -17,7 +17,8 @@
 - 영화를 클릭하면 모달창이 떠서 영화에 대한 상세한 정보를 볼 수 있습니다.
 
 ### ㅇ스크린샷
-
+- 시작페이지
+![main_port_01](https://user-images.githubusercontent.com/39721152/70598579-7da10780-1c2e-11ea-82c0-e61b7933f3ca.jpg)
 
 
 
