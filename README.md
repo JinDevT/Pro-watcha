@@ -19,7 +19,7 @@
 ### ㅇ스크린샷
 - 시작페이지
 
-
+![main_port_01](https://user-images.githubusercontent.com/39721152/70599870-a2e34500-1c31-11ea-83a5-18ee18fb48ed.jpg)
 
 ![work_detail_02](https://user-images.githubusercontent.com/39721152/70598650-a6290180-1c2e-11ea-8d01-b24bdd826cb8.jpg)
 
