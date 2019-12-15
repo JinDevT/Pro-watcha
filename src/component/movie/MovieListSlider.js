@@ -1,6 +1,6 @@
-import React, { useState } from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
-import styled from './node_modules/styled-components';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import MovieDetail from './MovieDetail';
 
 const MovieListLi = styled.li`
