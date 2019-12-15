@@ -3,8 +3,6 @@ import SignTemplate from '../component/sign/SignTemplate';
 import SignUpForm from '../containers/sign/SignUpForm';
 import CheckBox from '../component/sign/ChexBox';
 
-
-
 const SignUpPage = () => {
     return (
         <SignTemplate>
@@ -12,7 +10,7 @@ const SignUpPage = () => {
                 <CheckBox/>
             </SignUpForm>
         </SignTemplate>
-    )
+    );
 }
 
 export default SignUpPage;

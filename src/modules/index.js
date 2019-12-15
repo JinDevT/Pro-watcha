@@ -11,8 +11,6 @@ const rootReducer = combineReducers({
     romance: romanceReducer,
     animation: animationReducer,
     horror: horrorReducer
-
-    
 })
 
 export default rootReducer;

@@ -1,7 +1,5 @@
 import { GET_ROMANCE } from './movie';
 
-
-
 export default function(state = [], action) {
     switch (action.type) {
         case GET_ROMANCE:

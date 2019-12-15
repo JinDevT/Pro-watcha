@@ -19,19 +19,17 @@ const ComedyMovieContainer = () => {
                 { comedyData.results && comedyData.results.map(movie => ( 
                     <MovieListSlider 
                         key={movie.id}
-                        title={movie.title} //타이틀
-                        average={movie.vote_average} // 평점
-                        overview={movie.overview} //정보
-                        poster={movie.poster_path} //포스터
-                        date={movie.release_date} //출시일
-                        backImg={movie.backdrop_path} //배경화면
+                        title={movie.title} 
+                        average={movie.vote_average} 
+                        overview={movie.overview} 
+                        poster={movie.poster_path} 
+                        date={movie.release_date} 
+                        backImg={movie.backdrop_path} 
                     /> 
                 ))}
-        
             </MovieList>
         </>
-        
-    )
+    );
 }
 
 export default ComedyMovieContainer;

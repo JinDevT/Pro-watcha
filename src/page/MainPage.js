@@ -8,7 +8,6 @@ import RomanceMovieContainer from '../containers/movie/RomanceMovieContainer';
 import AnimationMovieContainer from '../containers/movie/AnimationMovieContainer';
 import HorrorMovieContainer from '../containers/movie/HorrorMovieContainer';
 
-
 const MainPage = () => {
     return(
         <Main>

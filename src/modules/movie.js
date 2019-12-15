@@ -11,8 +11,6 @@ export const GET_HORROR = 'movie/GET_HORROR';
 const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
 const API_URL = `https://api.themoviedb.org/3`;
 
-
-
 // Action.
 export const getActionData = (data) => {
     return {
@@ -107,7 +105,7 @@ export const getHorror = () => dispatch => {
     .catch(error => {
         throw(error);
     })
-}
+};
 
 
 
