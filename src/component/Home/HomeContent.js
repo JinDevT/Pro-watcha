@@ -45,8 +45,6 @@ class HomeContent extends Component {
             ]
         }
     }
-    
-
     render() {
         const { content } = this.state;
         return (
@@ -77,7 +75,6 @@ class HomeContent extends Component {
                     })
                 }
                 <Footer/>
-                
             </HomeContentBlock>
         );
     }
