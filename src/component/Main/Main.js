@@ -4,8 +4,6 @@ import Header from '../common/Header';
 import Nav from '../common/Nav';
 import Footer from '../common/Footer';
 
-
-
 const MainBlock = styled.div`
     height: 100%;
     padding: 56px 0 0;
@@ -21,7 +19,7 @@ const Main =({children}) => {
     return(
         <MainBlock>
             <Header/>
-            <Nav main type='main' className="scrolling"/>
+            <Nav className="scrolling"/>
             <MainBox>
                 {children}
             <Footer />

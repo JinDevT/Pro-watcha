@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
-
-
 
 const Cont = styled.div`
     position: relative;
@@ -76,9 +73,8 @@ const Home = (props) =>{
                     </div>
                 </div>
             </Cont>
-            
         </>
-    )
+    );
 }
 
 export default Home;

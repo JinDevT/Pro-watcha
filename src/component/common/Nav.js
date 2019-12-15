@@ -1,8 +1,7 @@
-import React, { useState }from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Logo from '../../assets/images/logo.png';
-
 
 const NavBlock = styled.nav`
     position: fixed;
@@ -11,21 +10,11 @@ const NavBlock = styled.nav`
     height: 70px;
     padding: 0 50px;
     transition: all .5s ease-in;
-    ${props =>
-        props.main &&
-        css`
-            top: 56px;
-            &.backColor {
-                background-color: #111;
-            }
-        `}
-    
     &:after {
         display: block;
         content: '';
         clear: both;
     }
-    
 `;
 
 const LeftNav = styled.div`
@@ -40,12 +29,10 @@ const LeftNav = styled.div`
         width: 100%;
         height: 100%;
     }
-    
 `;
 
 const RightNav = styled.div`
     float: right;
-
 `;
 
 const NavList = styled.ul`
@@ -69,32 +56,15 @@ const ListLi =  styled.li`
 `;
 
 const Nav = props => {
-    const [scroll, setScroll] = useState(false);
-
-    const MainScroll = () => {
-        if(window.scrollY === 0) {
-            setScroll(false);
-        } else if (window.scrollY > 20) {
-            setScroll(true);
-        }
-    }
-
-    window.addEventListener('scroll', MainScroll);
-
     return (
-        <NavBlock {...props} className={"navigation " + (scroll ? "backColor" : "" )}>
+        <NavBlock {...props}>
             <LeftNav>
                 <Link to='/' className="logo" ></Link>
             </LeftNav>
             
             <RightNav>
-                {/* 두번 째 링크에 조건부.
-                    1. 시작하기 텍스트
-                    2. 로그인 텍스트
-                */}
                 <NavList>
                     <ListLi>
-                        {/* <Link to='/start' className="btn start_btn">시작하기</Link> */}
                     </ListLi>
                 </NavList>
             </RightNav>

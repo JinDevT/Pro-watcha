@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Slide from './Slide';
 
-
 const SliderBlock =  styled.div`
   position: relative;
   width: 100%;
@@ -159,4 +158,5 @@ class Slider extends Component {
       );
     }
   }
+  
   export default Slider;

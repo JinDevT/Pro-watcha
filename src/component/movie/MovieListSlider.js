@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
 import MovieDetail from './MovieDetail';
-
-
 
 const MovieListLi = styled.li`
     padding: 0 2px;
@@ -163,7 +160,6 @@ const MovieListLi = styled.li`
 
 
 const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
-  
     const [ detail, setDetail ] = useState(false);
     const showDetail = () => {setDetail(true);}
     const closeDetail = () => {setDetail(false);}
@@ -205,10 +201,6 @@ const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
                     onClick={() => closeDetail()}
                 />
             </>
-             
-          
-       
-           
     );
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Slider from './Slider';
 
-
 const MainSlideBlock = styled.div`
     position: relative;
     padding-top: 50%;
@@ -23,6 +22,7 @@ const MainSlideBlock = styled.div`
         height: 100%;
    }
 `;
+
 const MainSlider = () => {
     return (
         <MainSlideBlock>
@@ -32,8 +32,8 @@ const MainSlider = () => {
                     <Slider/>
                 </div>
             </div>
-            
         </MainSlideBlock>
     );
 }
+
 export default MainSlider;
