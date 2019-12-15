@@ -20,11 +20,6 @@ const MainPage = () => {
                 <AnimationMovieContainer />
                 <HorrorMovieContainer />
             </MovieLayout>
-            
-                
-                
-           
-            
         </Main>
     );
 }
