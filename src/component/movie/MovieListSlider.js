@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import '../../assets/css/style.css';
 import MovieDetail from './MovieDetail';
 
 const MovieListLi = styled.li`
@@ -127,7 +128,6 @@ const MovieListLi = styled.li`
                     -o-transform:rotate(-45deg);
                     -ms-transform:rotate(-45deg);
                 }
-                // hover 했을 때, 상속받아서 사용할 방법은 없을까?
                 &:hover:before {
                     content:'';
                     position:absolute;
@@ -156,13 +156,21 @@ const MovieListLi = styled.li`
         overflow: hidden;
         color: #fff;
     }
+   
 `;
 
 
 const MovieListSlider = ({title, date, overview, average, poster, backImg}) => {
     const [ detail, setDetail ] = useState(false);
-    const showDetail = () => {setDetail(true);}
-    const closeDetail = () => {setDetail(false);}
+    let body = document.getElementsByTagName('body')[0];
+    const showDetail = () => {
+        setDetail(true);
+        body.classList.add("not_scroll");
+    }
+    const closeDetail = () => {
+        setDetail(false);
+        body.classList.remove("not_scroll");
+    }
     return(
            <>
                 <MovieListLi>
