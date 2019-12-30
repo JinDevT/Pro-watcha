@@ -23,7 +23,6 @@ const HeaderTitle = styled.p`
 `;
 
 const UseButton = styled.button`
-    width: 100px;
     height: 40px;
     background-color: #000;
     border-radius: 4px;
