@@ -4,8 +4,7 @@ import styled from 'styled-components';
 const MovieLayoutBlock = styled.div`
     position: relative;
     z-index: 100;
-    margin-top: -65px;
-
+    margin-top: -150px;
     .movie_wrap > h3{
         padding: 0 50px;
         margin-bottom: 10px;
@@ -14,6 +13,7 @@ const MovieLayoutBlock = styled.div`
         font-size: 20px;
     }
 `;
+
 
 const MovieLayout = ({children}) => {
     return(

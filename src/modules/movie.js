@@ -7,11 +7,11 @@ export const GET_ROMANCE = 'movie/GET_ROMANCE';
 export const GET_ANIMATION = 'movie/GET_ANIMATION';
 export const GET_HORROR = 'movie/GET_HORROR';
 
-// Api infomation
+// Api information
 const API_KEY = 'a158e2a9424bc69fec449dcaeb82aba8';
 const API_URL = `https://api.themoviedb.org/3`;
 
-// Action.
+// Action
 export const getActionData = (data) => {
     return {
         type: GET_ACTION,
@@ -47,7 +47,6 @@ export const getComedy = () => dispatch => {
     .catch(error => {
         throw(error);
     })
-    
 };
 
 // Romance
@@ -66,7 +65,6 @@ export const getRomance = () => dispatch => {
     .catch(error => {
         throw(error);
     })
-    
 };
 
 // Animation
@@ -85,11 +83,9 @@ export const getAnimation = () => dispatch => {
     .catch(error => {
         throw(error);
     })
-    
 };
 
 // Horror
-
 export const getHorrorData = (data) => {
     return {
         type: GET_HORROR,

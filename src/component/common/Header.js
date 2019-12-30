@@ -10,6 +10,7 @@ const HeaderBlock =  styled.header`
     align-items: center;
     background: #22b99b;
     width: 100%;
+    min-width: 1280px;
     height: 56px;
     padding: 0 50px;
 

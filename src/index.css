@@ -13,7 +13,7 @@ article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {font-family:'NotoSansKR','맑은 고딕', 'Malgun Gothic', sans-serif; margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; box-sizing: border-box; }
 
-body { line-height:1; font-family:'NotoSansKR','맑은 고딕', 'Malgun Gothic', sans-serif;}
+body { line-height:1; font-family:'NotoSansKR','맑은 고딕', 'Malgun Gothic', sans-serif; min-width: 1280px;}
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { display:block; }
@@ -47,3 +47,7 @@ hr { display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1
 
 input, select { vertical-align:middle; box-sizing: border-box; }
 textarea { box-sizing: border-box; }
+
+.not_scroll {
+    overflow: hidden;
+}
