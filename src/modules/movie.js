@@ -28,7 +28,6 @@ export const getAction = () => dispatch => {
         console.log('error');
         throw(error);
     })
-    
 };
 
 // Comedy
