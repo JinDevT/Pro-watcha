@@ -16,6 +16,10 @@
 - Styled-Component
 
 ### ㅇ설치 및 실행
+``` 
+npm install
+npm start
+  ```
 
 ### ㅇ기능
 - 이미지 슬라이더를 Javascript로 직접 제작하여 슬라이드 효과를 주었습니다.
