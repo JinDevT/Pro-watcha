@@ -17,7 +17,10 @@
 
 ### ㅇ설치 및 실행
 ``` 
+https://github.com/JinDevT/Pro-watcha.git <- clone
+
 npm install
+
 npm start
   ```
 
