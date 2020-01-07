@@ -15,6 +15,8 @@
 - Axios
 - Styled-Component
 
+### ㅇ설치 및 실행
+
 ### ㅇ기능
 - 이미지 슬라이더를 Javascript로 직접 제작하여 슬라이드 효과를 주었습니다.
 - MovieDB api를 를 사용하여 매주 업데이트 되는 영화를 장르별로 볼 수 있습니다.
