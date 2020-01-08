@@ -12,6 +12,7 @@
 ### ㅇ스킬
 - React
 - Redux
+- Redux-thunk
 - Axios
 - Styled-Component
 
